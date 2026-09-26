@@ -1,0 +1,660 @@
+{
+  "$defs": {
+    "Assertion": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "chain": {
+          "enum": [
+            "bitcoin",
+            "ethereum",
+            "tron",
+            "bnb",
+            "solana",
+            "polygon"
+          ],
+          "title": "Chain",
+          "type": "string"
+        },
+        "address": {
+          "title": "Address",
+          "type": "string"
+        },
+        "entity": {
+          "maxLength": 160,
+          "minLength": 1,
+          "title": "Entity",
+          "type": "string"
+        },
+        "category": {
+          "enum": [
+            "exchange",
+            "custodian",
+            "mixer",
+            "bridge",
+            "defi",
+            "unknown"
+          ],
+          "title": "Category",
+          "type": "string"
+        },
+        "role": {
+          "default": "unknown",
+          "enum": [
+            "deposit",
+            "hot",
+            "cluster",
+            "contract",
+            "unknown"
+          ],
+          "title": "Role",
+          "type": "string"
+        },
+        "grade": {
+          "default": "hypothesis",
+          "enum": [
+            "reviewed",
+            "provider",
+            "hypothesis"
+          ],
+          "title": "Grade",
+          "type": "string"
+        },
+        "source_family": {
+          "maxLength": 160,
+          "minLength": 1,
+          "title": "Source Family",
+          "type": "string"
+        },
+        "source": {
+          "maxLength": 500,
+          "minLength": 1,
+          "title": "Source",
+          "type": "string"
+        },
+        "evidence": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Evidence",
+          "type": "array"
+        },
+        "valid_from": {
+          "default": 0,
+          "minimum": 0,
+          "title": "Valid From",
+          "type": "integer"
+        },
+        "valid_to": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Valid To"
+        },
+        "risk_tags": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Risk Tags",
+          "type": "array"
+        }
+      },
+      "required": [
+        "id",
+        "chain",
+        "address",
+        "entity",
+        "category",
+        "source_family",
+        "source",
+        "evidence"
+      ],
+      "title": "Assertion",
+      "type": "object"
+    },
+    "BridgeProof": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "maxLength": 160,
+          "minLength": 1,
+          "title": "Id",
+          "type": "string"
+        },
+        "protocol": {
+          "const": "cctp-v2",
+          "default": "cctp-v2",
+          "title": "Protocol",
+          "type": "string"
+        },
+        "registry_version": {
+          "const": "circle-cctp-evm-2026-09-24",
+          "default": "circle-cctp-evm-2026-09-24",
+          "title": "Registry Version",
+          "type": "string"
+        },
+        "source_chain": {
+          "enum": [
+            "ethereum",
+            "polygon"
+          ],
+          "title": "Source Chain",
+          "type": "string"
+        },
+        "destination_chain": {
+          "enum": [
+            "ethereum",
+            "polygon"
+          ],
+          "title": "Destination Chain",
+          "type": "string"
+        },
+        "source_txhash": {
+          "title": "Source Txhash",
+          "type": "string"
+        },
+        "destination_txhash": {
+          "title": "Destination Txhash",
+          "type": "string"
+        },
+        "nonce": {
+          "title": "Nonce",
+          "type": "string"
+        },
+        "source_receipt": {
+          "additionalProperties": true,
+          "title": "Source Receipt",
+          "type": "object"
+        },
+        "source_block": {
+          "additionalProperties": true,
+          "title": "Source Block",
+          "type": "object"
+        },
+        "destination_receipt": {
+          "additionalProperties": true,
+          "title": "Destination Receipt",
+          "type": "object"
+        },
+        "destination_block": {
+          "additionalProperties": true,
+          "title": "Destination Block",
+          "type": "object"
+        },
+        "iris_response": {
+          "additionalProperties": true,
+          "title": "Iris Response",
+          "type": "object"
+        },
+        "public_keys": {
+          "additionalProperties": true,
+          "title": "Public Keys",
+          "type": "object"
+        },
+        "evidence": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 20,
+          "minItems": 1,
+          "title": "Evidence",
+          "type": "array"
+        },
+        "grade": {
+          "default": "hypothesis",
+          "enum": [
+            "reviewed",
+            "provider",
+            "hypothesis"
+          ],
+          "title": "Grade",
+          "type": "string"
+        },
+        "source_family": {
+          "default": "circle-cctp-v2",
+          "maxLength": 160,
+          "minLength": 1,
+          "title": "Source Family",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "source_chain",
+        "destination_chain",
+        "source_txhash",
+        "destination_txhash",
+        "nonce",
+        "source_receipt",
+        "source_block",
+        "destination_receipt",
+        "destination_block",
+        "iris_response",
+        "public_keys",
+        "evidence"
+      ],
+      "title": "BridgeProof",
+      "type": "object"
+    },
+    "Coverage": {
+      "additionalProperties": false,
+      "properties": {
+        "chain": {
+          "enum": [
+            "bitcoin",
+            "ethereum",
+            "tron",
+            "bnb",
+            "solana",
+            "polygon"
+          ],
+          "title": "Chain",
+          "type": "string"
+        },
+        "address": {
+          "title": "Address",
+          "type": "string"
+        },
+        "status": {
+          "enum": [
+            "complete",
+            "partial",
+            "unavailable",
+            "not_fetched"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "reason": {
+          "title": "Reason",
+          "type": "string"
+        },
+        "pages": {
+          "default": 0,
+          "minimum": 0,
+          "title": "Pages",
+          "type": "integer"
+        },
+        "evidence": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Evidence",
+          "type": "array"
+        },
+        "cursor": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Cursor"
+        }
+      },
+      "required": [
+        "chain",
+        "address",
+        "status",
+        "reason"
+      ],
+      "title": "Coverage",
+      "type": "object"
+    },
+    "ReconciliationGap": {
+      "additionalProperties": false,
+      "properties": {
+        "chain": {
+          "enum": [
+            "bitcoin",
+            "ethereum",
+            "tron",
+            "bnb",
+            "solana",
+            "polygon"
+          ],
+          "title": "Chain",
+          "type": "string"
+        },
+        "address": {
+          "title": "Address",
+          "type": "string"
+        },
+        "event_id": {
+          "maxLength": 240,
+          "minLength": 1,
+          "title": "Event Id",
+          "type": "string"
+        },
+        "reason": {
+          "maxLength": 500,
+          "minLength": 1,
+          "title": "Reason",
+          "type": "string"
+        },
+        "evidence": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 40,
+          "minItems": 1,
+          "title": "Evidence",
+          "type": "array"
+        }
+      },
+      "required": [
+        "chain",
+        "address",
+        "event_id",
+        "reason",
+        "evidence"
+      ],
+      "title": "ReconciliationGap",
+      "type": "object"
+    },
+    "Transfer": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "maxLength": 240,
+          "minLength": 1,
+          "title": "Id",
+          "type": "string"
+        },
+        "chain": {
+          "enum": [
+            "bitcoin",
+            "ethereum",
+            "tron",
+            "bnb",
+            "solana",
+            "polygon"
+          ],
+          "title": "Chain",
+          "type": "string"
+        },
+        "txid": {
+          "maxLength": 160,
+          "minLength": 1,
+          "title": "Txid",
+          "type": "string"
+        },
+        "senders": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 1000,
+          "minItems": 1,
+          "title": "Senders",
+          "type": "array"
+        },
+        "recipient": {
+          "title": "Recipient",
+          "type": "string"
+        },
+        "asset": {
+          "title": "Asset",
+          "type": "string"
+        },
+        "amount": {
+          "pattern": "^\\d{1,80}$",
+          "title": "Amount",
+          "type": "string"
+        },
+        "decimals": {
+          "maximum": 36,
+          "minimum": 0,
+          "title": "Decimals",
+          "type": "integer"
+        },
+        "timestamp": {
+          "minimum": 0,
+          "title": "Timestamp",
+          "type": "integer"
+        },
+        "position": {
+          "anyOf": [
+            {
+              "items": {
+                "type": "integer"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Position"
+        },
+        "finality": {
+          "default": "confirmed",
+          "enum": [
+            "finalized",
+            "confirmed",
+            "pending",
+            "orphaned"
+          ],
+          "title": "Finality",
+          "type": "string"
+        },
+        "success": {
+          "default": true,
+          "title": "Success",
+          "type": "boolean"
+        },
+        "kind": {
+          "default": "native",
+          "enum": [
+            "native",
+            "token",
+            "internal",
+            "utxo",
+            "bridge"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "evidence": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Evidence",
+          "type": "array"
+        },
+        "input_outpoints": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Input Outpoints",
+          "type": "array"
+        },
+        "output_index": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Output Index"
+        },
+        "destination_chain": {
+          "anyOf": [
+            {
+              "enum": [
+                "bitcoin",
+                "ethereum",
+                "tron",
+                "bnb",
+                "solana",
+                "polygon"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Destination Chain"
+        },
+        "destination_asset": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Destination Asset"
+        },
+        "bridge_proof": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Bridge Proof"
+        }
+      },
+      "required": [
+        "id",
+        "chain",
+        "txid",
+        "senders",
+        "recipient",
+        "asset",
+        "amount",
+        "decimals",
+        "timestamp",
+        "evidence"
+      ],
+      "title": "Transfer",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "default": "1.0",
+      "enum": [
+        "1.0",
+        "1.1",
+        "1.2"
+      ],
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "mode": {
+      "enum": [
+        "live",
+        "imported",
+        "fixture"
+      ],
+      "title": "Mode",
+      "type": "string"
+    },
+    "origin": {
+      "title": "Origin",
+      "type": "string"
+    },
+    "collected_at": {
+      "title": "Collected At",
+      "type": "integer"
+    },
+    "events": {
+      "items": {
+        "$ref": "#/$defs/Transfer"
+      },
+      "maxItems": 20000,
+      "title": "Events",
+      "type": "array"
+    },
+    "assertions": {
+      "items": {
+        "$ref": "#/$defs/Assertion"
+      },
+      "maxItems": 20000,
+      "title": "Assertions",
+      "type": "array"
+    },
+    "coverage": {
+      "items": {
+        "$ref": "#/$defs/Coverage"
+      },
+      "maxItems": 5000,
+      "title": "Coverage",
+      "type": "array"
+    },
+    "bridge_proofs": {
+      "items": {
+        "$ref": "#/$defs/BridgeProof"
+      },
+      "maxItems": 100,
+      "title": "Bridge Proofs",
+      "type": "array"
+    },
+    "reconciliation_gaps": {
+      "items": {
+        "$ref": "#/$defs/ReconciliationGap"
+      },
+      "maxItems": 20000,
+      "title": "Reconciliation Gaps",
+      "type": "array"
+    },
+    "limitations": {
+      "default": [],
+      "items": {
+        "type": "string"
+      },
+      "title": "Limitations",
+      "type": "array"
+    },
+    "window_start": {
+      "default": 0,
+      "title": "Window Start",
+      "type": "integer"
+    },
+    "window_end": {
+      "minimum": 1,
+      "title": "Window End",
+      "type": "integer"
+    }
+  },
+  "required": [
+    "mode",
+    "origin",
+    "collected_at",
+    "window_end"
+  ],
+  "title": "Snapshot",
+  "type": "object"
+}

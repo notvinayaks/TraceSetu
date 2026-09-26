@@ -1,0 +1,124 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "maxLength": 160,
+      "minLength": 1,
+      "title": "Id",
+      "type": "string"
+    },
+    "protocol": {
+      "const": "cctp-v2",
+      "default": "cctp-v2",
+      "title": "Protocol",
+      "type": "string"
+    },
+    "registry_version": {
+      "const": "circle-cctp-evm-2026-09-24",
+      "default": "circle-cctp-evm-2026-09-24",
+      "title": "Registry Version",
+      "type": "string"
+    },
+    "source_chain": {
+      "enum": [
+        "ethereum",
+        "polygon"
+      ],
+      "title": "Source Chain",
+      "type": "string"
+    },
+    "destination_chain": {
+      "enum": [
+        "ethereum",
+        "polygon"
+      ],
+      "title": "Destination Chain",
+      "type": "string"
+    },
+    "source_txhash": {
+      "title": "Source Txhash",
+      "type": "string"
+    },
+    "destination_txhash": {
+      "title": "Destination Txhash",
+      "type": "string"
+    },
+    "nonce": {
+      "title": "Nonce",
+      "type": "string"
+    },
+    "source_receipt": {
+      "additionalProperties": true,
+      "title": "Source Receipt",
+      "type": "object"
+    },
+    "source_block": {
+      "additionalProperties": true,
+      "title": "Source Block",
+      "type": "object"
+    },
+    "destination_receipt": {
+      "additionalProperties": true,
+      "title": "Destination Receipt",
+      "type": "object"
+    },
+    "destination_block": {
+      "additionalProperties": true,
+      "title": "Destination Block",
+      "type": "object"
+    },
+    "iris_response": {
+      "additionalProperties": true,
+      "title": "Iris Response",
+      "type": "object"
+    },
+    "public_keys": {
+      "additionalProperties": true,
+      "title": "Public Keys",
+      "type": "object"
+    },
+    "evidence": {
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 20,
+      "minItems": 1,
+      "title": "Evidence",
+      "type": "array"
+    },
+    "grade": {
+      "default": "hypothesis",
+      "enum": [
+        "reviewed",
+        "provider",
+        "hypothesis"
+      ],
+      "title": "Grade",
+      "type": "string"
+    },
+    "source_family": {
+      "default": "circle-cctp-v2",
+      "maxLength": 160,
+      "minLength": 1,
+      "title": "Source Family",
+      "type": "string"
+    }
+  },
+  "required": [
+    "id",
+    "source_chain",
+    "destination_chain",
+    "source_txhash",
+    "destination_txhash",
+    "nonce",
+    "source_receipt",
+    "source_block",
+    "destination_receipt",
+    "destination_block",
+    "iris_response",
+    "public_keys",
+    "evidence"
+  ],
+  "title": "BridgeProof",
+  "type": "object"
+}

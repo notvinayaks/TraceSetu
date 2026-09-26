@@ -1,0 +1,51 @@
+# Local credentials, case records and generated evidence
+.env
+.env.*
+!.env.example
+.local/
+*.db
+*.db-*
+*.sqlite
+*.sqlite3
+*.sqlite3-*
+*.pem
+*.key
+bootstrap-credentials.txt
+# Installed dependencies and build/test output
+.venv/
+venv/
+node_modules/
+dist/
+.pnpm-store/
+__pycache__/
+*.py[cod]
+*.tsbuildinfo
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+playwright-report/
+test-results/
+tmp/
+output/
+*.log
+# This repository contains the prototype, not submission media or narration
+*.mp4
+*.mov
+*.webm
+*.avi
+*.wav
+*.mp3
+*.pptx
+*.pdf
+*.docx
+*.zip
+*narration*
+*Narration*
+*walkthrough*
+*video*
+# Local editor / operating-system files
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db

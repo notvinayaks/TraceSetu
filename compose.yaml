@@ -1,0 +1,37 @@
+services:
+  database:
+    image: postgres:16
+    environment:
+      POSTGRES_DB: atlas
+      POSTGRES_USER: atlas
+      POSTGRES_PASSWORD: ${ATLAS_DB_PASSWORD:?Set ATLAS_DB_PASSWORD in your environment}
+    volumes:
+      - database:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U atlas -d atlas"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+  atlas:
+    build: .
+    ports:
+      - "127.0.0.1:8787:8787"
+    depends_on:
+      database:
+        condition: service_healthy
+    environment:
+      ATLAS_DATABASE_URL: postgresql+psycopg://atlas:${ATLAS_DB_PASSWORD}@database:5432/atlas
+      ATLAS_DATA_DIR: /var/lib/atlas
+      ATLAS_LOCAL_BOOTSTRAP: "true"
+      ATLAS_ALLOWED_HOSTS: 127.0.0.1,localhost
+      ATLAS_SECURE_COOKIE: "false"
+      ATLAS_ETHERSCAN_API_KEY: ${ATLAS_ETHERSCAN_API_KEY:-}
+      ATLAS_ETHERSCAN_METADATA_ENABLED: ${ATLAS_ETHERSCAN_METADATA_ENABLED:-false}
+      ATLAS_TRONGRID_API_KEY: ${ATLAS_TRONGRID_API_KEY:-}
+    volumes:
+      - evidence:/var/lib/atlas
+    restart: unless-stopped
+volumes:
+  database:
+  evidence:

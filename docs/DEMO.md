@@ -1,0 +1,14 @@
+# Training workflow
+
+Use **How it works** on the sign-in page or in the sidebar for the complete in-app guide. These exercises are synthetic: Example Exchange Alpha/Beta and their transfers are invented, not real ownership claims.
+
+1. Start the app, sign in as **investigator**, and choose **Open training case**. Inspect Alpha's one-hop boundary, Beta's two-hop boundary, the mixer stop and incomplete branch. Click wallets and transfers to inspect their evidence.
+2. Open **Assumptions** and challenge the `fixture-directory` source family. Alpha disappears when its support is removed. The original result remains available; a missing label does not establish self-custody.
+3. Return to Overview. Choose **Plan within a request budget**, enter **4**, and inspect the plan. Planning makes no provider calls. Select **Execute training expansion**, review the scope and select **Start selected queries**. This adds explicitly invented training evidence with zero HTTP calls and creates a new result. Configured live execution uses actual read-only providers and a shared per-job request ceiling.
+4. In **Evidence**, download the report and signed ZIP. Open **Verify evidence** to check signature, hashes and deterministic replay. Changing a signed member must invalidate the bundle. The signature establishes integrity relative to a key, not the truth of ownership.
+5. In **VASP directory**, choose **Synthetic training recipient**. Propose a test-only recipient whose entity is exactly `Example Exchange Alpha`. Sign in as **reviewer** in a separate browser session and approve it. Training recipients cannot be used for operational requests.
+6. As investigator, prepare a disclosure or preservation package from the candidate. Have the reviewer approve its exact payload, then export it. The package states `NOT_SENT` and `NOT_CONNECTED`; no external notice or freeze occurs.
+7. A signed response can be imported and independently reviewed. Only the requested wallet/entity/time interval may be promoted. See [service feedback](service-feedback.md). **Reassess recorded evidence** produces a new result with current approved assertions and no transfer refetch. Withdrawal retains history and blocks stale exports until reassessment.
+8. For cross-chain evidence, choose **Review a bridge case**. Its synthetic CCTP proof starts unreviewed. Propose it in Evidence, approve as a separate reviewer, then reassess. Inspect the Ethereum-to-Polygon path, burn, fee and net mint. Removing the proof removes its support. This is one scoped protocol, not universal cross-chain tracing.
+
+For real data, create a separate case and deliberately choose **Live provider acquisition** after configuring providers. Real provider failures stay failures. Do not describe a synthetic expansion or recipient as an actual investigation or service confirmation.
