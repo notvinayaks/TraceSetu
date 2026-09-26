@@ -109,6 +109,12 @@ def assess(check, job, snapshot=None, bundle=None, trusted_fingerprint=None):
 def run_check(client, check, output, *, timeout_seconds=240, trusted_fingerprint=None):
     folder = Path(output) / check.name
     folder.mkdir(parents=True, exist_ok=False)
+    response = client.get("/api/capabilities")
+    response.raise_for_status()
+    capability = next(row for row in response.json()["chains"] if row["chain"] == check.spec.chain)
+    provider_state = {"provider": capability["provider"], "configured_at_start": capability["configured"],
+        "entitlement_status": "not_checked" if capability["configured"] else "not_configured",
+        "data_use_rights_verified": False}
     case = client.post("/api/cases", json={"title": "Live connector validation · " + check.spec.chain,
         "reference": "VALIDATION-" + uuid.uuid4().hex[:12], "members": [],
         "description": "Public read-only connector validation. No suspicion or ownership is asserted."})
@@ -127,7 +133,7 @@ def run_check(client, check, output, *, timeout_seconds=240, trusted_fingerprint
         if time.monotonic() >= deadline:
             manifest = {"check": check.name, "chain": check.spec.chain, "job_id": job_id,
                 "status": "timed_out", "job_may_still_be_running": True,
-                "ownership_validated": False, "full_chain_validated": False}
+                "ownership_validated": False, "full_chain_validated": False, "provider_access": provider_state}
             (folder / "manifest.json").write_text(json.dumps(manifest, indent=2), encoding="utf-8")
             return manifest
         time.sleep(1)
@@ -143,5 +149,8 @@ def run_check(client, check, output, *, timeout_seconds=240, trusted_fingerprint
         bundle = response.content
         (folder / "evidence.zip").write_bytes(bundle)
     manifest = assess(check, job, snapshot, bundle, trusted_fingerprint)
+    if manifest["successful_http_responses"] > 0:
+        provider_state["entitlement_status"] = "endpoint_response_observed_only"
+    manifest["provider_access"] = provider_state
     (folder / "manifest.json").write_text(json.dumps(manifest, indent=2), encoding="utf-8")
     return manifest

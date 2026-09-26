@@ -12,6 +12,8 @@ Resumed 26 September 2026 at the user's explicit request. Available data access:
 
 The authoritative task ledger remains `IMPLEMENTATION_CHECKLIST.md`. Its tasks are unweighted, not a readiness percentage. Each sizeable task may have verified substeps without its parent being complete. The current prototype has 116 passing backend tests and successful local/browser/GitHub CI evidence; those checks do not establish the remaining production properties.
 
+**Current verified milestone:** B08 schema upgrades and D15 live-validation tooling are complete for their stated scope. The updated suite has 128 passing SQLite tests and 130 passing PostgreSQL tests; frontend and browser checks pass. The live runner recorded a bounded Bitcoin transfer sample, empty transfer probes on Tron/Solana, and missing configured access on Ethereum/BNB/Polygon. See [foundation verification](PRODUCT_FOUNDATION_VERIFICATION.md). Public/free live transfer acquisition for the remaining networks, reliable identity inputs and the other production gates are the next work; this is not a complete product yet.
+
 The five differentiators remain first custody per path, an inspectable nearestness certificate, source-family challenge, budget-aware evidence acquisition and provenance-preserving reviewed service feedback. All product extensions must preserve exact values, original evidence, reproducible decisions, permission boundaries and explicit uncertainty.
 
 ## Technical references checked for this phase
