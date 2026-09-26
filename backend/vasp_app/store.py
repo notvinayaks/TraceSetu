@@ -92,13 +92,21 @@ class Audit(Base):
     created: Mapped[float] = mapped_column(Float, default=now)
 
 
+class WorkerHeartbeat(Base):
+    __tablename__ = "worker_heartbeats"
+    id: Mapped[str] = mapped_column(String(48), primary_key=True)
+    started: Mapped[float] = mapped_column(Float)
+    last_seen: Mapped[float] = mapped_column(Float, index=True)
+    status: Mapped[str] = mapped_column(String(24))
+
+
 settings.data_dir.mkdir(parents=True, exist_ok=True)
 kwargs = (
     {"connect_args": {"check_same_thread": False, "timeout": 30}}
     if settings.database_url.startswith("sqlite")
     else {}
 )
-engine = create_engine(settings.database_url, pool_pre_ping=True, **kwargs)
+engine = create_engine(settings.database_url, pool_pre_ping=True, hide_parameters=True, **kwargs)
 if settings.database_url.startswith("sqlite"):
 
     @event.listens_for(engine, "connect")

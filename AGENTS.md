@@ -1,6 +1,6 @@
 # TraceSetu prototype contributor instructions
 
-Read README.md, docs/status.md and the relevant contract documentation before modifying the app. This repository contains the functioning SIH MVP; full production expansion is deferred unless explicitly requested.
+Read README.md, docs/status.md and the relevant contract documentation before modifying the app. The user explicitly resumed full product development on 26 September 2026, using public/free APIs only for now. Preserve the verified MVP on main while developing and testing the full product on product/live-foundation. Operational capabilities require measured evidence; external access/acceptance gates must remain explicit.
 
 - Preserve the evidence distinction between observed transfers, provider assertions, reviewed labels, hypotheses, synthetic fixtures and missing coverage.
 - Live mode must never silently use synthetic data. Unknown does not mean low risk or self-custody.

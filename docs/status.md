@@ -1,5 +1,7 @@
 # Prototype capability and limits register
 
+**Product branch update:** full product work has resumed. Migrations, worker heartbeats, readiness/admin operations and a bounded live-validation runner have been added on `product/live-foundation`; see `OPERATIONS.md` and `PRODUCT_BUILD.md`. The table below preserves the published MVP baseline. New integration/operational verification must be recorded separately rather than treating the historical tests as proof of new capabilities.
+
 Scope: the working local SIH prototype as packaged on 26 September 2026. Full production infrastructure remains future work. This source repository does not include the original machine's private case database or its generated reports.
 
 | Capability | Current evidence / limit |

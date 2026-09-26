@@ -17,7 +17,9 @@ from .store import (
     record,
     digest,
     uid,
+    WorkerHeartbeat,
 )
+from .config import settings
 from .domain import Snapshot, TraceSpec, Assertion, BridgeProof
 from .engine import analyze
 from .fixtures import training_snapshot
@@ -288,17 +290,21 @@ def run_job(job_id, claimed_attempt=None):
 
 def claim_one(with_token=False):
     with SessionLocal() as db:
-        candidate = db.scalar(
+        query = (
             select(Job)
             .where(or_(Job.status == "QUEUED", (Job.status == "RUNNING") & (Job.lease_until < now())))
             .order_by(Job.created)
             .limit(1)
         )
+        if db.bind.dialect.name == "postgresql":
+            query = query.with_for_update(skip_locked=True)
+        candidate = db.scalar(query)
         if not candidate:
             return None
         if candidate.attempts >= 3:
-            candidate.status = "FAILED"
-            candidate.error = "Worker recovery limit reached"
+            db.execute(update(Job).where(Job.id == candidate.id, Job.status == candidate.status,
+                Job.lease_until == candidate.lease_until, Job.attempts == candidate.attempts).values(
+                    status="FAILED", error="Worker recovery limit reached", updated=now()))
             db.commit()
             return None
         old_status = candidate.status
@@ -322,17 +328,45 @@ def claim_one(with_token=False):
 
 
 def loop():
-    while not stop_event.is_set():
-        try:
-            schedule_watches()
-            claim = claim_one(with_token=True)
-            if claim:
-                run_job(*claim)
-        except Exception:
-            import logging
+    from .observability import emit
 
-            logging.getLogger("atlas.worker").exception("Worker loop error")
-        stop_event.wait(0.75)
+    worker_id, started = uid("wrk_"), now()
+    heartbeat_stop = threading.Event()
+
+    def heartbeat(status="running"):
+        with SessionLocal() as db:
+            db.merge(WorkerHeartbeat(id=worker_id, started=started, last_seen=now(), status=status))
+            db.commit()
+
+    def pulse():
+        while not heartbeat_stop.wait(settings.worker_heartbeat_seconds):
+            try:
+                heartbeat()
+            except Exception as exc:
+                emit("worker_heartbeat_failed", component="worker", error_type=type(exc).__name__)
+
+    heartbeat()
+    pulse_thread = threading.Thread(target=pulse, name="atlas-heartbeat", daemon=True)
+    pulse_thread.start()
+    emit("worker_started", component="worker")
+    try:
+        while not stop_event.is_set():
+            try:
+                schedule_watches()
+                claim = claim_one(with_token=True)
+                if claim:
+                    run_job(*claim)
+            except Exception as exc:
+                emit("worker_loop_failed", component="worker", error_type=type(exc).__name__)
+            stop_event.wait(0.75)
+    finally:
+        heartbeat_stop.set()
+        pulse_thread.join(timeout=5)
+        try:
+            heartbeat("stopped")
+        except Exception as exc:
+            emit("worker_shutdown_heartbeat_failed", component="worker", error_type=type(exc).__name__)
+        emit("worker_stopped", component="worker")
 
 
 def start():
@@ -344,7 +378,12 @@ def start():
 
 def schedule_watches():
     with SessionLocal() as db:
-        for watch in db.scalars(select(Record).where(Record.kind == "watch")):
+        query = select(Record).where(Record.kind == "watch")
+        if db.bind.dialect.name == "postgresql":
+            query = query.with_for_update(skip_locked=True)
+        elif db.bind.dialect.name == "sqlite":
+            db.connection().exec_driver_sql("BEGIN IMMEDIATE")
+        for watch in db.scalars(query):
             p = watch.payload
             if not p.get("enabled"):
                 continue

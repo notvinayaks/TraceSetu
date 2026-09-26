@@ -16,7 +16,6 @@ from cryptography.hazmat.primitives.asymmetric.ed25519 import Ed25519PublicKey
 from cryptography.exceptions import InvalidSignature
 from .config import settings, ROOT
 from .store import (
-    Base,
     engine,
     SessionLocal,
     User,
@@ -77,11 +76,16 @@ from .reports import make_bundle, verify_bundle, pdf_report, signing_key
 from .feedback import verify_response, promoted_assertion
 from .planner import plan_queries, POLICY_VERSION
 from . import worker
+from .migrations import upgrade, require_current
+from .observability import configure_logging, OperationalMiddleware, readiness, tenant_operations
 
 
 @asynccontextmanager
 async def lifespan(app):
-    Base.metadata.create_all(engine)
+    configure_logging()
+    if settings.auto_migrate:
+        upgrade(engine)
+    require_current(engine)
     with SessionLocal() as db:
         bootstrap(db)
     signing_key()
@@ -108,6 +112,7 @@ app.add_middleware(
     allow_methods=["GET", "POST", "PATCH", "DELETE"],
     allow_headers=["Content-Type", "X-CSRF-Token", "Idempotency-Key"],
 )
+app.add_middleware(OperationalMiddleware)
 
 
 @app.middleware("http")
@@ -158,6 +163,19 @@ def health():
         "deployment": "independent installation",
         "sahyog": "not connected",
     }
+
+
+@app.get("/api/ready")
+def ready(response: Response):
+    report = readiness()
+    response.status_code = 200 if report["ready"] else 503
+    return {"ready": report["ready"]}
+
+
+@app.get("/api/operations")
+def operations(user=Depends(principal)):
+    require_role(user, "admin")
+    return {"readiness": readiness(), "tenant": tenant_operations(user.tenant)}
 
 
 @app.post("/api/auth/login")

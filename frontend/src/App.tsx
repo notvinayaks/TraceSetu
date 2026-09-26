@@ -42,6 +42,7 @@ import {
 } from "lucide-react";
 import { api, post, setCsrf, date, short, amount, type Row } from "./api";
 import { HowItWorks } from "./HowItWorks";
+import { OperationsPanel } from "./OperationsPanel";
 const LazyGraph = lazy(() =>
   import("./Graph").then((m) => ({ default: m.FundGraph })),
 );
@@ -2666,6 +2667,7 @@ export default function App() {
                   </table>
                 </div>
               </section>
+              {user.role === "admin" && <OperationsPanel />}
               {caps?.cross_chain && (
                 <section className="panel spaced">
                   <div className="panel-heading">

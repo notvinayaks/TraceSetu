@@ -29,3 +29,27 @@ jobs:
         working-directory: frontend
       - run: pnpm build
         working-directory: frontend
+  postgres:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:16
+        env:
+          POSTGRES_DB: tracesetu_test
+          POSTGRES_USER: tracesetu_test
+          POSTGRES_PASSWORD: ephemeral-integration-test-only
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U tracesetu_test -d tracesetu_test"
+          --health-interval 5s --health-timeout 5s --health-retries 12
+    env:
+      ATLAS_TEST_POSTGRES_URL: postgresql+psycopg://tracesetu_test:ephemeral-integration-test-only@localhost:5432/tracesetu_test
+      ATLAS_TEST_DATABASE_URL: postgresql+psycopg://tracesetu_test:ephemeral-integration-test-only@localhost:5432/tracesetu_test
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -r requirements.lock
+      - run: python -m pytest tests -q

@@ -1,5 +1,7 @@
 # TraceSetu
 
+**Product development branch:** the full product build resumed on 26 September 2026 using public/free APIs. The published MVP remains on `main`. This branch adds versioned migrations, separate-worker operation, readiness checks, an admin service-health panel and bounded live-validation tooling. Read [operations](docs/OPERATIONS.md) before upgrading an existing database and [the build plan](docs/PRODUCT_BUILD.md) for the remaining acceptance gates. Full operational readiness is not yet claimed.
+
 **Follow the funds. Find the receiving service.**
 
 TraceSetu is a local investigation workbench for the SIH problem of attributing an unknown cryptocurrency wallet to the nearest supported Virtual Asset Service Provider (VASP), such as an exchange or custodian. It follows recorded transfers, shows the first evidenced receiving service on each path, exposes missing information, and prepares a request package for independent review.
