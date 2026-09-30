@@ -1,0 +1,30 @@
+{
+  "source": "C:\\Users\\vinay\\OneDrive\\Desktop\\vinayak_jee\\vinayak_engineering\\SIH 2026\\output\\submission\\TraceSetu_ANANTHA_SIH2026.pptx",
+  "output": "C:\\Users\\vinay\\OneDrive\\Desktop\\vinayak_jee\\vinayak_engineering\\SIH 2026\\tmp\\method-review-20260929\\candidate-preserved.pptx",
+  "slides": 6,
+  "text_shapes_edited": 81,
+  "changed_package_parts": [
+    "ppt/slides/slide1.xml",
+    "ppt/notesSlides/notesSlide1.xml",
+    "ppt/slides/slide2.xml",
+    "ppt/notesSlides/notesSlide2.xml",
+    "ppt/slides/slide3.xml",
+    "ppt/notesSlides/notesSlide3.xml",
+    "ppt/slides/slide4.xml",
+    "ppt/notesSlides/notesSlide4.xml",
+    "ppt/slides/slide5.xml",
+    "ppt/notesSlides/notesSlide5.xml",
+    "ppt/slides/slide6.xml",
+    "ppt/notesSlides/notesSlide6.xml",
+    "ppt/slides/_rels/slide1.xml.rels",
+    "ppt/slides/_rels/slide2.xml.rels",
+    "ppt/slides/_rels/slide3.xml.rels",
+    "ppt/slides/_rels/slide4.xml.rels",
+    "ppt/slides/_rels/slide5.xml.rels",
+    "ppt/slides/_rels/slide6.xml.rels"
+  ],
+  "masters_layouts_theme_fonts_media_unchanged": true,
+  "shape_geometry_picture_bytes_table_grids_unchanged": true,
+  "source_sha256": "93f92d4cf138f08dabe56559b8d0996f61e4bf94c086e45c956a6cafa9b7a0f3",
+  "candidate_sha256": "5b8b14a5e33a01e3ca9c5e5782565a4c93fe3e91f9a2506f8737aea87aaee09f"
+}

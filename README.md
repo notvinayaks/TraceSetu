@@ -1,6 +1,16 @@
 # TraceSetu
 
-**Product development branch:** the full product build resumed on 26 September 2026 using public/free APIs. The published MVP remains on `main`. This branch adds versioned migrations, separate-worker operation, readiness checks, an admin service-health panel and bounded live-validation tooling. Read [operations](docs/OPERATIONS.md) before upgrading an existing database and [the build plan](docs/PRODUCT_BUILD.md) for the remaining acceptance gates. Full operational readiness is not yet claimed.
+**Latest project package — 30 September 2026:** `product/live-foundation` contains the verified application foundation plus the completed research, reference experiment, guides and SIH deliverables. The published MVP remains on `main`. Full-product development is paused; publication does not claim completion. Read [operations](docs/OPERATIONS.md) before upgrading an existing database and [the build plan](docs/PRODUCT_BUILD.md) for the remaining acceptance gates. Public/free APIs remain the access constraint.
+
+## Start with the latest work
+
+- [Eight-page forensic-method paper](output/pdf/TraceSetu_Forensic_Method_Research_Paper.pdf) and [editable source](research/method-review-20260929/TraceSetu_Forensic_Method_Research_Paper.md).
+- [Revised six-slide PPT](output/submission/TraceSetu_ANANTHA_SIH2026_Research_Revision.pptx), preserving the supplied design.
+- [Synthetic reference experiment](research/method-review-20260929/reference/README.md): 64 passing functional/adversarial tests; no measured live attribution accuracy or app integration.
+- [Simple visual guide](output/pdf/TraceSetu_Simple_Visual_Guide.pdf), [detailed team guide](output/pdf/TraceSetu_Problem_and_Solution_Explained.pdf), and [original research/implementation report](output/pdf/VASP_Attribution_Research_and_Implementation_Report.pdf).
+- [Complete project handover / skill](skills/custody-atlas-sih/SKILL.md), [implementation checklist](IMPLEMENTATION_CHECKLIST.md), and [publication scope](docs/PUBLICATION_20260930.md).
+
+The proposed extension uses sourced service wallets to generate deposit-address hypotheses, then searches transfers in chronological order to the first supported custody boundary. A perfectly imitating customer remains indistinguishable from service control; independent deposit evidence is still required. Older deliverables are retained as history; [the output index](output/README.md) identifies current files.
 
 **Follow the funds. Find the receiving service.**
 
@@ -8,7 +18,7 @@ TraceSetu is a local investigation workbench for the SIH problem of attributing 
 
 **Status: functioning SIH prototype.** It is not connected to SAHYOG, does not identify customers from wallet addresses, and cannot freeze funds. A request export is explicitly marked `NOT_SENT` / `NOT_CONNECTED`. See the [capability and limits register](docs/status.md).
 
-This repository contains the application, synthetic training fixtures, tests and setup documentation. It includes no private cases, credentials, provider responses, videos, narration or presentation files. A fresh installation starts with an empty case register; training cases are created inside the app.
+This branch contains the application, synthetic training fixtures, tests, research, setup documentation and selected project presentation/document files. It includes no private cases, credentials, provider responses, recordings or standalone narration files. A fresh installation starts with an empty case register; training cases are created inside the app.
 
 ## What works
 
@@ -97,7 +107,7 @@ The optional `scripts/live_bitcoin_check.py` performs a bounded public Esplora s
 | Evidence | ReportLab PDF, SHA-256, Ed25519 signatures and replay; `reports.py` |
 | Verification | Pytest, Ruff, TypeScript build, Playwright workflows |
 
-Attribution does not use an LLM or an invented probability score. Source grades, conflicts and missing coverage are visible. PostgreSQL configuration and Docker recipes are provided, but production database concurrency, Docker deployment and large-scale operation are not yet validated.
+Attribution does not use an LLM or an invented probability score. Source grades, conflicts and missing coverage are visible. The foundation's PostgreSQL test concurrency is verified in CI; an installed production deployment, Docker operation and large-scale performance remain separate acceptance gates.
 
 ## Tests
 

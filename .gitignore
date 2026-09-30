@@ -29,7 +29,7 @@ test-results/
 tmp/
 output/
 *.log
-# This repository contains the prototype, not submission media or narration
+# Recordings and generated documents are excluded unless explicitly allowlisted below
 *.mp4
 *.mov
 *.webm
@@ -49,3 +49,27 @@ output/
 .vscode/
 .DS_Store
 Thumbs.db
+
+# User-authorised project deliverables (30 September 2026), exact allowlist
+!output/
+output/*
+!output/README.md
+!output/pdf/
+output/pdf/*
+!output/submission/
+output/submission/*
+!output/TraceSetu_COMPLETE_SKILL.md
+!output/pdf/TraceSetu_Forensic_Method_Research_Paper.pdf
+!output/pdf/TraceSetu_Problem_and_Solution_Explained.pdf
+!output/pdf/TraceSetu_Simple_Visual_Guide.pdf
+!output/pdf/VASP_Attribution_Implementation_Report.md
+!output/pdf/VASP_Attribution_Research_and_Implementation_Report.pdf
+!output/pdf/VASP_Attribution_Source_Register.csv
+!output/submission/TraceSetu_ANANTHA_SIH2026.pptx
+!output/submission/TraceSetu_ANANTHA_SIH2026_FINAL.pptx
+!output/submission/TraceSetu_ANANTHA_SIH2026_Research_Revision.pptx
+!output/submission/TraceSetu_ANANTHA_SIH2026_SUBMISSION.pptx
+!output/submission/TraceSetu_Project_Brief.docx
+!output/submission/TraceSetu_SIH2026_Original_Template.pdf
+!output/submission/TraceSetu_SIH2026_Original_Template.pptx
+!output/submission/TraceSetu_Team_Explanation.docx

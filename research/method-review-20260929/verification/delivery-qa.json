@@ -1,0 +1,84 @@
+{
+  "date": "2026-09-29",
+  "source_ppt_unchanged": true,
+  "source_sha256": "93f92d4cf138f08dabe56559b8d0996f61e4bf94c086e45c956a6cafa9b7a0f3",
+  "final_ppt_sha256": "5b8b14a5e33a01e3ca9c5e5782565a4c93fe3e91f9a2506f8737aea87aaee09f",
+  "final_pdf_sha256": "12abddc87381cbf8abd61c521900b06c890c405697593797d80eebf16d952841",
+  "pdf_pages": 8,
+  "pdf_primary_references": 10,
+  "pdf_unique_source_links": [
+    "https://arxiv.org/abs/1908.02591",
+    "https://arxiv.org/abs/2102.13613",
+    "https://cseweb.ucsd.edu/~smeiklejohn/files/imc13.pdf",
+    "https://doi.org/10.1002/nem.2325",
+    "https://fc20.ifca.ai/preproceedings/31.pdf",
+    "https://github.com/graphsense/graphsense-tagpacks",
+    "https://www.cl.cam.ac.uk/archive/rja14/Papers/bitcoin-redux.pdf",
+    "https://www.usenix.org/system/files/sec19-yousaf_0.pdf",
+    "https://www.usenix.org/system/files/sec22-kappos.pdf",
+    "https://www.usenix.org/system/files/usenixsecurity25-lubbertsen.pdf",
+    "https://www.vldb.org/pvldb/vol7/p721-wu.pdf"
+  ],
+  "pdf_text_bounds": [
+    {
+      "page": 1,
+      "body_bottom": 668.35,
+      "body_text_min_left": 56.0,
+      "out_of_page_chars": 0
+    },
+    {
+      "page": 2,
+      "body_bottom": 704.15,
+      "body_text_min_left": 56.0,
+      "out_of_page_chars": 0
+    },
+    {
+      "page": 3,
+      "body_bottom": 631.15,
+      "body_text_min_left": 56.0,
+      "out_of_page_chars": 0
+    },
+    {
+      "page": 4,
+      "body_bottom": 660.15,
+      "body_text_min_left": 56.0,
+      "out_of_page_chars": 0
+    },
+    {
+      "page": 5,
+      "body_bottom": 673.45,
+      "body_text_min_left": 56.0,
+      "out_of_page_chars": 0
+    },
+    {
+      "page": 6,
+      "body_bottom": 705.25,
+      "body_text_min_left": 56.0,
+      "out_of_page_chars": 0
+    },
+    {
+      "page": 7,
+      "body_bottom": 743.65,
+      "body_text_min_left": 56.0,
+      "out_of_page_chars": 0
+    },
+    {
+      "page": 8,
+      "body_bottom": 586.21,
+      "body_text_min_left": 56.0,
+      "out_of_page_chars": 0
+    }
+  ],
+  "all_eight_pdf_pages_visually_reviewed": true,
+  "all_six_final_native_ppt_slides_visually_reviewed": true,
+  "ppt_native_tables": 3,
+  "geometry_font_assets_preserved": true,
+  "ppt_validation_findings": 0,
+  "ppt_layout_warnings": 21,
+  "ppt_warning_review": "Template text-frame/connector bounding-box warnings reviewed against native renders; no visible overlap or clipping in final output.",
+  "reference_test_count": 64,
+  "reference_tests_synthetic_only": true,
+  "live_accuracy_measured": false,
+  "app_changed": false,
+  "named_backlog_tasks": "52/95 unchanged"
+}

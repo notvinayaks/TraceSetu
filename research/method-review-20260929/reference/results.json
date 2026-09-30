@@ -1,0 +1,959 @@
+{
+  "experiment": "TraceSetu proposed isolated account-based deposit-candidate reference",
+  "version": 2,
+  "status": "isolated_research_reference_not_integrated_into_mvp",
+  "data_origin": "entirely_synthetic_no_real_addresses_or_identity_labels",
+  "external_api_calls": 0,
+  "real_world_precision_measured": false,
+  "real_world_recall_measured": false,
+  "synthetic_pass_rate_is_attribution_accuracy": false,
+  "proven_ownership_outputs_allowed": false,
+  "thresholds": {
+    "minimum_cycles": 3,
+    "minimum_token_units": 100,
+    "calibrated": false,
+    "purpose": "toy_demonstration_policy_only"
+  },
+  "tests": {
+    "run": 64,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "all_passed": true,
+    "outcomes": [
+      {
+        "test": "test_method.CandidateTests.test_allowance_spender_transaction_is_out_of_scope",
+        "outcome": "passed"
+      },
+      {
+        "test": "test_method.CandidateTests.test_closing_balances_must_reconcile",
+        "outcome": "passed"
+      },
+      {
+        "test": "test_method.CandidateTests.test_conflict_across_feeder_and_hot_roles_is_not_hidden",
+        "outcome": "passed"
+      },
+      {
+        "test": "test_method.CandidateTests.test_conflict_across_hot_and_deposit_roles_is_not_hidden",
+        "outcome": "passed"
+      },
+      {
+        "test": "test_method.CandidateTests.test_conflicting_feeder_anchors_abstain",
+        "outcome": "passed"
+      },
+      {
+        "test": "test_method.CandidateTests.test_conflicting_hot_wallet_anchors_abstain",
+        "outcome": "passed"
+      },
+      {
+        "test": "test_method.CandidateTests.test_duplicate_provider_event_is_not_a_second_observation",
+        "outcome": "passed"
+      },
+      {
+        "test": "test_method.CandidateTests.test_existing_balance_breaks_isolation",
+        "outcome": "passed"
+      },
+      {
+        "test": "test_method.CandidateTests.test_expired_anchor_cannot_support_later_cycle",
+        "outcome": "passed"
+      },
+      {
+        "test": "test_method.CandidateTests.test_failed_deposit_does_not_count_as_received",
+        "outcome": "passed"
+      },
+      {
+        "test": "test_method.CandidateTests.test_failed_outgoing_transaction_requires_more_accounting",
+        "outcome": "passed"
+      },
+      {
+        "test": "test_method.CandidateTests.test_float_amounts_are_not_accepted_as_exact_units",
+        "outcome": "passed"
+      },
+      {
+        "test": "test_method.CandidateTests.test_fully_imitated_pattern_is_indistinguishable_and_never_proves_ownership",
+        "outcome": "passed"
+      },
+      {
+        "test": "test_method.CandidateTests.test_future_cycles_cannot_satisfy_earlier_window",
+        "outcome": "passed"
+      },
+      {
+        "test": "test_method.CandidateTests.test_future_learned_identity_evidence_cannot_leak_into_historical_evaluation",
+        "outcome": "passed"
+      },
+      {
+        "test": "test_method.CandidateTests.test_gas_before_deposit_has_no_cycle_association_in_this_rule",
+        "outcome": "passed"
+      },
+      {
+        "test": "test_method.CandidateTests.test_hot_and_feeder_must_assert_same_service",
+        "outcome": "passed"
+      },
+      {
+        "test": "test_method.CandidateTests.test_incomplete_history_abstains",
+        "outcome": "passed"
+      },
+      {
+        "test": "test_method.CandidateTests.test_inexact_sweep_does_not_qualify",
+        "outcome": "passed"
+      },
+      {
+        "test": "test_method.CandidateTests.test_missing_opening_balance_abstains",
+        "outcome": "passed"
+      },
+      {
+        "test": "test_method.CandidateTests.test_missing_receipt_does_not_establish_gas_payment",
+        "outcome": "passed"
+      },
+      {
+        "test": "test_method.CandidateTests.test_mixed_token_asset_abstains",
+        "outcome": "passed"
+      },
+      {
+        "test": "test_method.CandidateTests.test_native_funding_must_cover_observed_fee",
+        "outcome": "passed"
+      },
+      {
+        "test": "test_method.CandidateTests.test_other_chain_same_address_activity_does_not_contaminate_window",
+        "outcome": "passed"
+      },
+      {
+        "test": "test_method.CandidateTests.test_overlapping_incomings_do_not_qualify",
+        "outcome": "passed"
+      },
+      {
+        "test": "test_method.CandidateTests.test_positive_dust_is_not_silently_dropped_to_manufacture_isolation",
+        "outcome": "passed"
+      },
+      {
+        "test": "test_method.CandidateTests.test_relabelled_duplicate_transaction_effect_abstains",
+        "outcome": "passed"
+      },
+      {
+        "test": "test_method.CandidateTests.test_relayer_paid_sweep_does_not_establish_subject_gas_use",
+        "outcome": "passed"
+      },
+      {
+        "test": "test_method.CandidateTests.test_repeated_personal_customer_payments_without_service_gas_do_not_qualify",
+        "outcome": "passed"
+      },
+      {
+        "test": "test_method.CandidateTests.test_same_address_on_other_chain_cannot_supply_identity_anchor",
+        "outcome": "passed"
+      },
+      {
+        "test": "test_method.CandidateTests.test_shared_relayer_is_not_a_service_gas_feeder_role",
+        "outcome": "passed"
+      },
+      {
+        "test": "test_method.CandidateTests.test_source_exclusion_removes_support_without_overwriting_original",
+        "outcome": "passed"
+      },
+      {
+        "test": "test_method.CandidateTests.test_source_reference_is_mandatory",
+        "outcome": "passed"
+      },
+      {
+        "test": "test_method.CandidateTests.test_temporal_reversal_abstains",
+        "outcome": "passed"
+      },
+      {
+        "test": "test_method.CandidateTests.test_three_complete_cycles_are_only_an_unconfirmed_hypothesis",
+        "outcome": "passed"
+      },
+      {
+        "test": "test_method.CandidateTests.test_token_only_history_abstains",
+        "outcome": "passed"
+      },
+      {
+        "test": "test_method.CandidateTests.test_two_cycles_do_not_meet_toy_threshold",
+        "outcome": "passed"
+      },
+      {
+        "test": "test_method.CandidateTests.test_unestablished_token_semantics_abstain",
+        "outcome": "passed"
+      },
+      {
+        "test": "test_method.CandidateTests.test_unexplained_native_outflow_abstains",
+        "outcome": "passed"
+      },
+      {
+        "test": "test_method.CandidateTests.test_unqualified_gas_donation_does_not_qualify",
+        "outcome": "passed"
+      },
+      {
+        "test": "test_method.CandidateTests.test_withdrawn_anchor_is_excluded_from_reanalysis",
+        "outcome": "passed"
+      },
+      {
+        "test": "test_method.CandidateTests.test_zero_and_reverted_incomings_cannot_create_extra_cycles",
+        "outcome": "passed"
+      },
+      {
+        "test": "test_method.FrontierTests.test_address_cycles_cannot_reuse_events_or_escape_hop_bounds",
+        "outcome": "passed"
+      },
+      {
+        "test": "test_method.FrontierTests.test_address_revisit_preserves_time_varying_custody_role",
+        "outcome": "passed"
+      },
+      {
+        "test": "test_method.FrontierTests.test_backward_in_time_path_is_not_traversed",
+        "outcome": "passed"
+      },
+      {
+        "test": "test_method.FrontierTests.test_changed_sweep_units_invalidate_precomputed_candidate",
+        "outcome": "passed"
+      },
+      {
+        "test": "test_method.FrontierTests.test_changing_anchor_role_invalidates_precomputed_candidate",
+        "outcome": "passed"
+      },
+      {
+        "test": "test_method.FrontierTests.test_conflicting_known_service_assertions_stop_unresolved",
+        "outcome": "passed"
+      },
+      {
+        "test": "test_method.FrontierTests.test_cross_chain_matching_address_is_not_a_path",
+        "outcome": "passed"
+      },
+      {
+        "test": "test_method.FrontierTests.test_gas_feeder_role_stops_without_asserting_customer_deposit_acceptance",
+        "outcome": "passed"
+      },
+      {
+        "test": "test_method.FrontierTests.test_hop_limit_does_not_become_no_vasp_claim",
+        "outcome": "passed"
+      },
+      {
+        "test": "test_method.FrontierTests.test_hot_wallet_assertion_alone_is_not_deposit_acceptance",
+        "outcome": "passed"
+      },
+      {
+        "test": "test_method.FrontierTests.test_hypothesis_frontier_stops_before_farther_hot_wallet",
+        "outcome": "passed"
+      },
+      {
+        "test": "test_method.FrontierTests.test_input_reordering_keeps_same_evidence_snapshot",
+        "outcome": "passed"
+      },
+      {
+        "test": "test_method.FrontierTests.test_known_label_baseline_reaches_farther_hot_wallet_without_proving_nearestness",
+        "outcome": "passed"
+      },
+      {
+        "test": "test_method.FrontierTests.test_never_trace_unrelated_withdrawals_inside_service",
+        "outcome": "passed"
+      },
+      {
+        "test": "test_method.FrontierTests.test_new_dust_transfer_invalidates_precomputed_candidate",
+        "outcome": "passed"
+      },
+      {
+        "test": "test_method.FrontierTests.test_removed_cycle_invalidates_precomputed_candidate",
+        "outcome": "passed"
+      },
+      {
+        "test": "test_method.FrontierTests.test_removing_anchors_invalidates_precomputed_candidate",
+        "outcome": "passed"
+      },
+      {
+        "test": "test_method.FrontierTests.test_source_challenge_recomputes_and_stops_unresolved",
+        "outcome": "passed"
+      },
+      {
+        "test": "test_method.FrontierTests.test_stale_unchallenged_candidate_cannot_survive_source_exclusion",
+        "outcome": "passed"
+      },
+      {
+        "test": "test_method.FrontierTests.test_state_budget_reports_unvisited_work",
+        "outcome": "passed"
+      },
+      {
+        "test": "test_method.FrontierTests.test_unknown_assessed_boundary_is_not_skipped_to_farther_hot_wallet",
+        "outcome": "passed"
+      },
+      {
+        "test": "test_method.FrontierTests.test_withdrawing_anchor_invalidates_precomputed_candidate",
+        "outcome": "passed"
+      }
+    ]
+  },
+  "scenarios": {
+    "three_isolated_cycles": {
+      "chain": "synthetic:account-chain-A",
+      "address": "SYNTHETIC_DEPOSIT_CANDIDATE",
+      "asset": "synthetic:plain-token",
+      "window": [
+        0,
+        40
+      ],
+      "as_of": 40,
+      "excluded_sources": [],
+      "evidence_snapshot_sha256": "e4649c49c859d96a3eeca1c47638e906849598112f382e008747c31ecbc62e82",
+      "status": "heuristic_candidate",
+      "service": "SYNTHETIC_SERVICE_ALPHA",
+      "reasons": [
+        "isolated_sweep_and_gas_pattern_requires_independent_confirmation"
+      ],
+      "cycles": [
+        {
+          "deposit_event": "deposit-1",
+          "deposit_at": 10,
+          "gas_event": "gas-1",
+          "sweep_event": "sweep-1",
+          "sweep_at": 12,
+          "token_units": 1000,
+          "observed_receipt_fee_units": 10,
+          "hot_wallet_anchor_ids": [
+            "hot-role"
+          ],
+          "gas_feeder_anchor_ids": [
+            "gas-role"
+          ],
+          "source_families": [
+            "synthetic:gas-role-source",
+            "synthetic:hot-role-source"
+          ],
+          "service_assertion": "SYNTHETIC_SERVICE_ALPHA"
+        },
+        {
+          "deposit_event": "deposit-2",
+          "deposit_at": 20,
+          "gas_event": "gas-2",
+          "sweep_event": "sweep-2",
+          "sweep_at": 22,
+          "token_units": 2000,
+          "observed_receipt_fee_units": 10,
+          "hot_wallet_anchor_ids": [
+            "hot-role"
+          ],
+          "gas_feeder_anchor_ids": [
+            "gas-role"
+          ],
+          "source_families": [
+            "synthetic:gas-role-source",
+            "synthetic:hot-role-source"
+          ],
+          "service_assertion": "SYNTHETIC_SERVICE_ALPHA"
+        },
+        {
+          "deposit_event": "deposit-3",
+          "deposit_at": 30,
+          "gas_event": "gas-3",
+          "sweep_event": "sweep-3",
+          "sweep_at": 32,
+          "token_units": 3000,
+          "observed_receipt_fee_units": 10,
+          "hot_wallet_anchor_ids": [
+            "hot-role"
+          ],
+          "gas_feeder_anchor_ids": [
+            "gas-role"
+          ],
+          "source_families": [
+            "synthetic:gas-role-source",
+            "synthetic:hot-role-source"
+          ],
+          "service_assertion": "SYNTHETIC_SERVICE_ALPHA"
+        }
+      ],
+      "ignored_events": [],
+      "calibrated_probability": null,
+      "ownership_proven": false,
+      "independent_confirmation_required": true
+    },
+    "repeated_personal_payments_without_service_gas": {
+      "chain": "synthetic:account-chain-A",
+      "address": "SYNTHETIC_DEPOSIT_CANDIDATE",
+      "asset": "synthetic:plain-token",
+      "window": [
+        0,
+        40
+      ],
+      "as_of": 40,
+      "excluded_sources": [],
+      "evidence_snapshot_sha256": "722a9019cc9c95ff1f2d81b24e8fb3fed16ac9ed8fa442f56c353da03fb8846a",
+      "status": "abstain",
+      "service": null,
+      "reasons": [
+        "cycle_gas_funding_missing"
+      ],
+      "cycles": [],
+      "ignored_events": [],
+      "calibrated_probability": null,
+      "ownership_proven": false,
+      "independent_confirmation_required": true
+    },
+    "unqualified_gas_donation": {
+      "chain": "synthetic:account-chain-A",
+      "address": "SYNTHETIC_DEPOSIT_CANDIDATE",
+      "asset": "synthetic:plain-token",
+      "window": [
+        0,
+        40
+      ],
+      "as_of": 40,
+      "excluded_sources": [],
+      "evidence_snapshot_sha256": "de363a5bf888e76007f55e022c66ef301cf308c444b3732efe954418cdc98216",
+      "status": "abstain",
+      "service": null,
+      "reasons": [
+        "source_qualified_service_gas_feeder_missing"
+      ],
+      "cycles": [],
+      "ignored_events": [],
+      "calibrated_probability": null,
+      "ownership_proven": false,
+      "independent_confirmation_required": true
+    },
+    "shared_relayer_without_service_feeder_role": {
+      "chain": "synthetic:account-chain-A",
+      "address": "SYNTHETIC_DEPOSIT_CANDIDATE",
+      "asset": "synthetic:plain-token",
+      "window": [
+        0,
+        40
+      ],
+      "as_of": 40,
+      "excluded_sources": [],
+      "evidence_snapshot_sha256": "344ee69dbe161d6fc2850dd8cbb463823a40fd1dc3eab4fb0998958742715255",
+      "status": "abstain",
+      "service": null,
+      "reasons": [
+        "source_qualified_service_gas_feeder_missing"
+      ],
+      "cycles": [],
+      "ignored_events": [],
+      "calibrated_probability": null,
+      "ownership_proven": false,
+      "independent_confirmation_required": true
+    },
+    "incomplete_window": {
+      "chain": "synthetic:account-chain-A",
+      "address": "SYNTHETIC_DEPOSIT_CANDIDATE",
+      "asset": "synthetic:plain-token",
+      "window": [
+        0,
+        40
+      ],
+      "as_of": 40,
+      "excluded_sources": [],
+      "evidence_snapshot_sha256": "e4649c49c859d96a3eeca1c47638e906849598112f382e008747c31ecbc62e82",
+      "status": "abstain",
+      "service": null,
+      "reasons": [
+        "complete_all_activity_window_not_attested"
+      ],
+      "cycles": [],
+      "ignored_events": [],
+      "calibrated_probability": null,
+      "ownership_proven": false,
+      "independent_confirmation_required": true
+    },
+    "conflicting_service_anchors": {
+      "chain": "synthetic:account-chain-A",
+      "address": "SYNTHETIC_DEPOSIT_CANDIDATE",
+      "asset": "synthetic:plain-token",
+      "window": [
+        0,
+        40
+      ],
+      "as_of": 40,
+      "excluded_sources": [],
+      "evidence_snapshot_sha256": "439c73e67cf2c81d4f47bad39c6382742179dcce52f4b40279c55c1e1734261d",
+      "status": "abstain",
+      "service": null,
+      "reasons": [
+        "conflicting_hot_wallet_service_anchors"
+      ],
+      "cycles": [],
+      "ignored_events": [],
+      "calibrated_probability": null,
+      "ownership_proven": false,
+      "independent_confirmation_required": true
+    },
+    "temporal_reversal": {
+      "chain": "synthetic:account-chain-A",
+      "address": "SYNTHETIC_DEPOSIT_CANDIDATE",
+      "asset": "synthetic:plain-token",
+      "window": [
+        0,
+        40
+      ],
+      "as_of": 40,
+      "excluded_sources": [],
+      "evidence_snapshot_sha256": "a4e3ce0f1235e451086aa436d745d015f44b58cf6c826ee99e12c65e76b949be",
+      "status": "abstain",
+      "service": null,
+      "reasons": [
+        "ledger_order_and_time_disagree"
+      ],
+      "cycles": [],
+      "ignored_events": [],
+      "calibrated_probability": null,
+      "ownership_proven": false,
+      "independent_confirmation_required": true
+    },
+    "future_identity_evidence_excluded": {
+      "chain": "synthetic:account-chain-A",
+      "address": "SYNTHETIC_DEPOSIT_CANDIDATE",
+      "asset": "synthetic:plain-token",
+      "window": [
+        0,
+        40
+      ],
+      "as_of": 40,
+      "excluded_sources": [],
+      "evidence_snapshot_sha256": "c077de0815f3a95c242eaf77e1ea6867e575b64959d0491d11263986d89ec225",
+      "status": "abstain",
+      "service": null,
+      "reasons": [
+        "source_qualified_service_gas_feeder_missing"
+      ],
+      "cycles": [],
+      "ignored_events": [],
+      "calibrated_probability": null,
+      "ownership_proven": false,
+      "independent_confirmation_required": true
+    },
+    "gas_source_excluded": {
+      "chain": "synthetic:account-chain-A",
+      "address": "SYNTHETIC_DEPOSIT_CANDIDATE",
+      "asset": "synthetic:plain-token",
+      "window": [
+        0,
+        40
+      ],
+      "as_of": 40,
+      "excluded_sources": [
+        "synthetic:gas-role-source"
+      ],
+      "evidence_snapshot_sha256": "e4649c49c859d96a3eeca1c47638e906849598112f382e008747c31ecbc62e82",
+      "status": "abstain",
+      "service": null,
+      "reasons": [
+        "source_qualified_service_gas_feeder_missing"
+      ],
+      "cycles": [],
+      "ignored_events": [],
+      "calibrated_probability": null,
+      "ownership_proven": false,
+      "independent_confirmation_required": true
+    },
+    "adversarial_full_pattern_imitation": {
+      "observations": "identical_to_three_isolated_cycles",
+      "alternative_hidden_reality": "customer_controls_address_and_receives_cooperating_service_feeder_gas",
+      "detector_result": {
+        "chain": "synthetic:account-chain-A",
+        "address": "SYNTHETIC_DEPOSIT_CANDIDATE",
+        "asset": "synthetic:plain-token",
+        "window": [
+          0,
+          40
+        ],
+        "as_of": 40,
+        "excluded_sources": [],
+        "evidence_snapshot_sha256": "e4649c49c859d96a3eeca1c47638e906849598112f382e008747c31ecbc62e82",
+        "status": "heuristic_candidate",
+        "service": "SYNTHETIC_SERVICE_ALPHA",
+        "reasons": [
+          "isolated_sweep_and_gas_pattern_requires_independent_confirmation"
+        ],
+        "cycles": [
+          {
+            "deposit_event": "deposit-1",
+            "deposit_at": 10,
+            "gas_event": "gas-1",
+            "sweep_event": "sweep-1",
+            "sweep_at": 12,
+            "token_units": 1000,
+            "observed_receipt_fee_units": 10,
+            "hot_wallet_anchor_ids": [
+              "hot-role"
+            ],
+            "gas_feeder_anchor_ids": [
+              "gas-role"
+            ],
+            "source_families": [
+              "synthetic:gas-role-source",
+              "synthetic:hot-role-source"
+            ],
+            "service_assertion": "SYNTHETIC_SERVICE_ALPHA"
+          },
+          {
+            "deposit_event": "deposit-2",
+            "deposit_at": 20,
+            "gas_event": "gas-2",
+            "sweep_event": "sweep-2",
+            "sweep_at": 22,
+            "token_units": 2000,
+            "observed_receipt_fee_units": 10,
+            "hot_wallet_anchor_ids": [
+              "hot-role"
+            ],
+            "gas_feeder_anchor_ids": [
+              "gas-role"
+            ],
+            "source_families": [
+              "synthetic:gas-role-source",
+              "synthetic:hot-role-source"
+            ],
+            "service_assertion": "SYNTHETIC_SERVICE_ALPHA"
+          },
+          {
+            "deposit_event": "deposit-3",
+            "deposit_at": 30,
+            "gas_event": "gas-3",
+            "sweep_event": "sweep-3",
+            "sweep_at": 32,
+            "token_units": 3000,
+            "observed_receipt_fee_units": 10,
+            "hot_wallet_anchor_ids": [
+              "hot-role"
+            ],
+            "gas_feeder_anchor_ids": [
+              "gas-role"
+            ],
+            "source_families": [
+              "synthetic:gas-role-source",
+              "synthetic:hot-role-source"
+            ],
+            "service_assertion": "SYNTHETIC_SERVICE_ALPHA"
+          }
+        ],
+        "ignored_events": [],
+        "calibrated_probability": null,
+        "ownership_proven": false,
+        "independent_confirmation_required": true
+      },
+      "can_this_rule_distinguish_control_from_pattern_alone": false,
+      "interpretation": "unresolved_identifiability_limit_not_a_successful_ownership_classification"
+    },
+    "known_label_only_frontier": {
+      "mode": "known_labels_only",
+      "chain": "synthetic:account-chain-A",
+      "asset": "synthetic:plain-token",
+      "window": [
+        0,
+        40
+      ],
+      "evidence_snapshot_sha256": "e4649c49c859d96a3eeca1c47638e906849598112f382e008747c31ecbc62e82",
+      "as_of": 40,
+      "max_hops": 4,
+      "explored_states": 5,
+      "truncated_by_state_budget": false,
+      "unvisited_state_count": 0,
+      "stops": [
+        {
+          "address": "SYNTHETIC_HOT_WALLET",
+          "path_event_ids": [
+            "deposit-1",
+            "sweep-1"
+          ],
+          "hops": 2,
+          "status": "known_service_assertion",
+          "service": "SYNTHETIC_SERVICE_ALPHA",
+          "anchor_ids": [
+            "hot-role"
+          ],
+          "asserted_roles": [
+            "hot_wallet"
+          ],
+          "deposit_acceptance_asserted": false,
+          "unlabelled_predecessors": [
+            "SYNTHETIC_DEPOSIT_CANDIDATE"
+          ],
+          "nearest_proven": false
+        },
+        {
+          "address": "SYNTHETIC_HOT_WALLET",
+          "path_event_ids": [
+            "deposit-1",
+            "sweep-2"
+          ],
+          "hops": 2,
+          "status": "known_service_assertion",
+          "service": "SYNTHETIC_SERVICE_ALPHA",
+          "anchor_ids": [
+            "hot-role"
+          ],
+          "asserted_roles": [
+            "hot_wallet"
+          ],
+          "deposit_acceptance_asserted": false,
+          "unlabelled_predecessors": [
+            "SYNTHETIC_DEPOSIT_CANDIDATE"
+          ],
+          "nearest_proven": false
+        },
+        {
+          "address": "SYNTHETIC_HOT_WALLET",
+          "path_event_ids": [
+            "deposit-1",
+            "sweep-3"
+          ],
+          "hops": 2,
+          "status": "known_service_assertion",
+          "service": "SYNTHETIC_SERVICE_ALPHA",
+          "anchor_ids": [
+            "hot-role"
+          ],
+          "asserted_roles": [
+            "hot_wallet"
+          ],
+          "deposit_acceptance_asserted": false,
+          "unlabelled_predecessors": [
+            "SYNTHETIC_DEPOSIT_CANDIDATE"
+          ],
+          "nearest_proven": false
+        }
+      ],
+      "globally_nearest_service_proven": false,
+      "path_semantics": "chronological_transfer_connectivity_not_same_unit_provenance",
+      "ownership_or_beneficiary_proven": false
+    },
+    "candidate_hypothesis_frontier": {
+      "mode": "candidate_frontier",
+      "chain": "synthetic:account-chain-A",
+      "asset": "synthetic:plain-token",
+      "window": [
+        0,
+        40
+      ],
+      "evidence_snapshot_sha256": "e4649c49c859d96a3eeca1c47638e906849598112f382e008747c31ecbc62e82",
+      "as_of": 40,
+      "max_hops": 4,
+      "explored_states": 2,
+      "truncated_by_state_budget": false,
+      "unvisited_state_count": 0,
+      "stops": [
+        {
+          "address": "SYNTHETIC_DEPOSIT_CANDIDATE",
+          "path_event_ids": [
+            "deposit-1"
+          ],
+          "hops": 1,
+          "status": "provisional_custody_boundary",
+          "service": "SYNTHETIC_SERVICE_ALPHA",
+          "ownership_proven": false,
+          "independent_confirmation_required": true,
+          "nearest_proven": false
+        }
+      ],
+      "globally_nearest_service_proven": false,
+      "path_semantics": "chronological_transfer_connectivity_not_same_unit_provenance",
+      "ownership_or_beneficiary_proven": false
+    },
+    "incomplete_boundary_frontier": {
+      "mode": "candidate_frontier",
+      "chain": "synthetic:account-chain-A",
+      "asset": "synthetic:plain-token",
+      "window": [
+        0,
+        40
+      ],
+      "evidence_snapshot_sha256": "e4649c49c859d96a3eeca1c47638e906849598112f382e008747c31ecbc62e82",
+      "as_of": 40,
+      "max_hops": 4,
+      "explored_states": 2,
+      "truncated_by_state_budget": false,
+      "unvisited_state_count": 0,
+      "stops": [
+        {
+          "address": "SYNTHETIC_DEPOSIT_CANDIDATE",
+          "path_event_ids": [
+            "deposit-1"
+          ],
+          "hops": 1,
+          "status": "unresolved_assessed_boundary",
+          "reasons": [
+            "complete_all_activity_window_not_attested"
+          ]
+        }
+      ],
+      "globally_nearest_service_proven": false,
+      "path_semantics": "chronological_transfer_connectivity_not_same_unit_provenance",
+      "ownership_or_beneficiary_proven": false
+    },
+    "source_excluded_frontier": {
+      "mode": "candidate_frontier",
+      "chain": "synthetic:account-chain-A",
+      "asset": "synthetic:plain-token",
+      "window": [
+        0,
+        40
+      ],
+      "evidence_snapshot_sha256": "e4649c49c859d96a3eeca1c47638e906849598112f382e008747c31ecbc62e82",
+      "as_of": 40,
+      "max_hops": 4,
+      "explored_states": 2,
+      "truncated_by_state_budget": false,
+      "unvisited_state_count": 0,
+      "stops": [
+        {
+          "address": "SYNTHETIC_DEPOSIT_CANDIDATE",
+          "path_event_ids": [
+            "deposit-1"
+          ],
+          "hops": 1,
+          "status": "unresolved_assessed_boundary",
+          "reasons": [
+            "source_qualified_service_gas_feeder_missing"
+          ]
+        }
+      ],
+      "globally_nearest_service_proven": false,
+      "path_semantics": "chronological_transfer_connectivity_not_same_unit_provenance",
+      "ownership_or_beneficiary_proven": false
+    },
+    "stale_candidate_after_anchor_removal_frontier": {
+      "mode": "candidate_frontier",
+      "chain": "synthetic:account-chain-A",
+      "asset": "synthetic:plain-token",
+      "window": [
+        0,
+        40
+      ],
+      "evidence_snapshot_sha256": "2bfcc593ebafcacdb3898dffcd40d4362b99b7f986151b9e470d536ba037314a",
+      "as_of": 40,
+      "max_hops": 4,
+      "explored_states": 2,
+      "truncated_by_state_budget": false,
+      "unvisited_state_count": 0,
+      "stops": [
+        {
+          "address": "SYNTHETIC_DEPOSIT_CANDIDATE",
+          "path_event_ids": [
+            "deposit-1"
+          ],
+          "hops": 1,
+          "status": "unresolved_stale_or_mismatched_assessment"
+        }
+      ],
+      "globally_nearest_service_proven": false,
+      "path_semantics": "chronological_transfer_connectivity_not_same_unit_provenance",
+      "ownership_or_beneficiary_proven": false
+    },
+    "time_varying_custody_revisit_frontier": {
+      "mode": "known_labels_only",
+      "chain": "synthetic:account-chain-A",
+      "asset": "synthetic:plain-token",
+      "window": [
+        0,
+        40
+      ],
+      "evidence_snapshot_sha256": "b56c9c63eccabb95da4562be7aecc766621374294fe966b121450019a2d95edd",
+      "as_of": 40,
+      "max_hops": 4,
+      "explored_states": 4,
+      "truncated_by_state_budget": false,
+      "unvisited_state_count": 0,
+      "stops": [
+        {
+          "address": "SYNTHETIC_DEPOSIT_CANDIDATE",
+          "path_event_ids": [
+            "first-arrival",
+            "forward",
+            "return"
+          ],
+          "hops": 3,
+          "status": "known_service_assertion",
+          "service": "SYNTHETIC_SERVICE_ALPHA",
+          "anchor_ids": [
+            "later-custody"
+          ],
+          "asserted_roles": [
+            "deposit_address"
+          ],
+          "deposit_acceptance_asserted": true,
+          "unlabelled_predecessors": [
+            "SYNTHETIC_DEPOSIT_CANDIDATE",
+            "SYNTHETIC_TRANSIT"
+          ],
+          "nearest_proven": false
+        }
+      ],
+      "globally_nearest_service_proven": false,
+      "path_semantics": "chronological_transfer_connectivity_not_same_unit_provenance",
+      "ownership_or_beneficiary_proven": false
+    },
+    "gas_feeder_only_role_frontier": {
+      "mode": "known_labels_only",
+      "chain": "synthetic:account-chain-A",
+      "asset": "synthetic:plain-token",
+      "window": [
+        0,
+        40
+      ],
+      "evidence_snapshot_sha256": "81b64755bfdb12391b83302877fde030d5f77dc9adcba309a95f833917fc308e",
+      "as_of": 40,
+      "max_hops": 4,
+      "explored_states": 5,
+      "truncated_by_state_budget": false,
+      "unvisited_state_count": 0,
+      "stops": [
+        {
+          "address": "SYNTHETIC_HOT_WALLET",
+          "path_event_ids": [
+            "deposit-1",
+            "sweep-1"
+          ],
+          "hops": 2,
+          "status": "unresolved_service_controlled_non_deposit_role",
+          "service": "SYNTHETIC_SERVICE_ALPHA",
+          "anchor_ids": [
+            "hot-role"
+          ],
+          "asserted_roles": [
+            "gas_feeder"
+          ],
+          "deposit_acceptance_asserted": false
+        },
+        {
+          "address": "SYNTHETIC_HOT_WALLET",
+          "path_event_ids": [
+            "deposit-1",
+            "sweep-2"
+          ],
+          "hops": 2,
+          "status": "unresolved_service_controlled_non_deposit_role",
+          "service": "SYNTHETIC_SERVICE_ALPHA",
+          "anchor_ids": [
+            "hot-role"
+          ],
+          "asserted_roles": [
+            "gas_feeder"
+          ],
+          "deposit_acceptance_asserted": false
+        },
+        {
+          "address": "SYNTHETIC_HOT_WALLET",
+          "path_event_ids": [
+            "deposit-1",
+            "sweep-3"
+          ],
+          "hops": 2,
+          "status": "unresolved_service_controlled_non_deposit_role",
+          "service": "SYNTHETIC_SERVICE_ALPHA",
+          "anchor_ids": [
+            "hot-role"
+          ],
+          "asserted_roles": [
+            "gas_feeder"
+          ],
+          "deposit_acceptance_asserted": false
+        }
+      ],
+      "globally_nearest_service_proven": false,
+      "path_semantics": "chronological_transfer_connectivity_not_same_unit_provenance",
+      "ownership_or_beneficiary_proven": false
+    }
+  },
+  "source_sha256": {
+    "method.py": "47b2db0f096ae0ded57582625ef76560906099e695a54e5a2dedf872eaf69ba6",
+    "fixtures.py": "ab0a7aa891295664df82fff3a20ce4ad328921c0690795d7a8ece735048ea284",
+    "test_method.py": "e875d59111fdbe709370888135ee3f905961124cf83c28a1335401f55756fd71",
+    "run_experiment.py": "f7e6eedd335fe7e25237bfa829d2499451ccef0b8423f44be1c9c0564ce42016"
+  }
+}
