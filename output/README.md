@@ -4,7 +4,8 @@ These are project documents, not private investigation output. The current metho
 
 ## Current deliverables
 
-- [Research revision of the six-slide PPT](submission/TraceSetu_ANANTHA_SIH2026_Research_Revision.pptx) — 29 September 2026. Use this version for the research-backed explanation; it preserves the selected source design.
+- [Final SIH PowerPoint](submission/TraceSetu_SIH2026_Idea_Submission.pptx) and [matching PDF](pdf/TraceSetu_SIH2026_Idea_Submission.pdf) — 30 September 2026. Six slides rebuilt inside the supplied idea-presentation template with the actual prototype screenshot, research method and working repository/video links.
+- [Idea title, description and abstract](submission/TraceSetu_Idea_Description_Abstract.txt) — ready to copy into submission fields. [Package notes and verification](../docs/SIH_SUBMISSION_20260930.md) distinguish completed work from the proposed extension. No SIH portal upload or acceptance is claimed.
 - [Forensic-method paper](pdf/TraceSetu_Forensic_Method_Research_Paper.pdf) — eight pages, diagram, rules, limitations, evaluation plan and ten primary references.
 - [Simple visual guide](pdf/TraceSetu_Simple_Visual_Guide.pdf) — three-page introduction.
 - [Detailed team explanation](pdf/TraceSetu_Problem_and_Solution_Explained.pdf) — twelve-page supporting guide.
@@ -12,6 +13,6 @@ These are project documents, not private investigation output. The current metho
 
 ## Historical design and planning records
 
-The original implementation report and source register in `pdf/` describe the intended complete solution. Their historical proposals are not all implemented. The PPT variants named `FINAL`, `SUBMISSION`, and the unsuffixed file are earlier versions; the `Research_Revision` file above is newer and authoritative for the revised method. `Original_Template` preserves the supplied presentation format.
+The original implementation report and source register in `pdf/` describe the intended complete solution. Their historical proposals are not all implemented. The [29 September research revision](submission/TraceSetu_ANANTHA_SIH2026_Research_Revision.pptx) and PPT variants named `FINAL`, `SUBMISSION`, and the unsuffixed file are earlier versions. Use the `TraceSetu_SIH2026_Idea_Submission` files above for the current submission. `Original_Template` preserves an earlier supplied presentation format.
 
 The Word project brief/team explanation are historical authoring files. Prefer the reviewed PDF explanations above. No recordings, standalone narration, real case snapshots, private signed evidence bundles or unrelated personal documents are included.

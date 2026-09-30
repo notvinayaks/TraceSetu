@@ -1,8 +1,16 @@
 # TraceSetu completed-work publication — 30 September 2026
 
-Destination: private `notvinayaks/TraceSetu`, branch `product/live-foundation`. `main` remains the previously verified MVP at `fac605d5e9d8688b561933790a571c65f6e704b3`.
+Destination: **public** [`notvinayaks/TraceSetu`](https://github.com/notvinayaks/TraceSetu/tree/product/live-foundation), branch `product/live-foundation`. `main` remains the previously verified MVP at `fac605d5e9d8688b561933790a571c65f6e704b3`.
 
 The user authorised publishing the completed project beyond the original prototype-only release. This package adds the original and updated research, ten-source method paper, isolated deposit-candidate reference, project guides, checklists, complete project skill, and selected SIH presentation/PDF/Word deliverables. Existing implementation/configuration remains available in the same branch. The README links the latest files and distinguishes older drafts.
+
+The initial completed-work package was pushed as `eb5b899c48a5b5c69322f4fa6546a643a10af595`. Unauthenticated GitHub access confirmed HTTP 200 and `private=false`. All four hosted jobs passed: [research-reference, backend, frontend and PostgreSQL](https://github.com/notvinayaks/TraceSetu/actions/runs/36720225633). The current files and retained Git history were inspected for private data and credentials before publication.
+
+## Final submission package
+
+The follow-up package adds the [six-slide final PowerPoint](../output/submission/TraceSetu_SIH2026_Idea_Submission.pptx), [matching PDF](../output/pdf/TraceSetu_SIH2026_Idea_Submission.pdf), and [idea title, description and abstract](../output/submission/TraceSetu_Idea_Description_Abstract.txt). It keeps the supplied SIH template's masters, layouts, logos, footer and font families. The native editable workflow, actual synthetic-training screenshot, five primary references, public repository and team-provided YouTube link are included. Presentation/package/link verification is recorded in [the submission notes](SIH_SUBMISSION_20260930.md) and [shareable receipt](verification/SIH_SUBMISSION_20260930.json).
+
+This is a project publication and prepared submission package. No SIH portal submission or acceptance is claimed. The separate detector still requires app integration and independent live validation.
 
 ## Verification and boundaries
 

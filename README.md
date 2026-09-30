@@ -4,13 +4,14 @@
 
 ## Start with the latest work
 
+- [Final SIH PowerPoint](output/submission/TraceSetu_SIH2026_Idea_Submission.pptx) and [matching PDF](output/pdf/TraceSetu_SIH2026_Idea_Submission.pdf), rebuilt inside the supplied idea-presentation template.
+- [Idea title, description and abstract](output/submission/TraceSetu_Idea_Description_Abstract.txt), [submission package details](docs/SIH_SUBMISSION_20260930.md), and [prototype walkthrough](https://www.youtube.com/watch?v=V_qB6dL934w).
 - [Eight-page forensic-method paper](output/pdf/TraceSetu_Forensic_Method_Research_Paper.pdf) and [editable source](research/method-review-20260929/TraceSetu_Forensic_Method_Research_Paper.md).
-- [Revised six-slide PPT](output/submission/TraceSetu_ANANTHA_SIH2026_Research_Revision.pptx), preserving the supplied design.
 - [Synthetic reference experiment](research/method-review-20260929/reference/README.md): 64 passing functional/adversarial tests; no measured live attribution accuracy or app integration.
 - [Simple visual guide](output/pdf/TraceSetu_Simple_Visual_Guide.pdf), [detailed team guide](output/pdf/TraceSetu_Problem_and_Solution_Explained.pdf), and [original research/implementation report](output/pdf/VASP_Attribution_Research_and_Implementation_Report.pdf).
 - [Complete project handover / skill](skills/custody-atlas-sih/SKILL.md), [implementation checklist](IMPLEMENTATION_CHECKLIST.md), and [publication scope](docs/PUBLICATION_20260930.md).
 
-The proposed extension uses sourced service wallets to generate deposit-address hypotheses, then searches transfers in chronological order to the first supported custody boundary. A perfectly imitating customer remains indistinguishable from service control; independent deposit evidence is still required. Older deliverables are retained as history; [the output index](output/README.md) identifies current files.
+The repository is public. The proposed extension uses sourced service wallets to generate deposit-address hypotheses, then searches transfers in chronological order to the first supported custody boundary. A perfectly imitating customer remains indistinguishable from service control; independent deposit evidence is still required. Older deliverables, including the [29 September research PPT](output/submission/TraceSetu_ANANTHA_SIH2026_Research_Revision.pptx), remain as history. [The output index](output/README.md) identifies current files. No SIH portal submission or acceptance is claimed.
 
 **Follow the funds. Find the receiving service.**
 

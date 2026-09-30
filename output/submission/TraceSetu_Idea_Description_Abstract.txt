@@ -1,0 +1,25 @@
+IDEA TITLE
+
+TraceSetu: Finding the First Receiving VASP from an Unknown Crypto Wallet
+
+DESCRIPTION
+
+TraceSetu helps investigators work out which crypto exchange or custodial service may have received assets from a reported wallet. These businesses are called Virtual Asset Service Providers, or VASPs.
+
+Our proposed approach uses public/free blockchain APIs and sourced service-wallet identities. It looks for repeated token collection and transaction-fee funding by the same service to suggest unlabelled deposit addresses. A graph search follows transfers in time order to the first supported custody point, while keeping uncertain earlier candidates visible.
+
+The distinction is practical: show why a service is suspected, let an officer challenge the evidence and identify the next useful check. The existing prototype provides case analysis, transfer graphs, query budgets and signed evidence export for reviewed requests.
+
+The separate deposit-detection reference passes 64 synthetic tests; integration, independent real-world validation and official SAHYOG access remain pending.
+
+ABSTRACT / SUMMARY
+
+An investigator may know a suspect crypto wallet but not the company that received its transfers. TraceSetu proposes combining public/free blockchain APIs, sourced exchange-wallet identities and deposit-pattern analysis to find possible receiving services. Repeated token collection and service-funded fees suggest deposit candidates; chronological graph search then identifies supported custody points and unresolved earlier gaps. Officers can inspect the evidence, challenge a source and prioritise the next query before preparing a reviewed request. The prototype implements the core investigation workflow, while the separate detector has passed 64 synthetic tests; integration, independent live validation and official SAHYOG connectivity remain pending.
+
+PROJECT RESOURCES
+
+Source code and research:
+https://github.com/notvinayaks/TraceSetu/tree/product/live-foundation
+
+Prototype walkthrough:
+https://www.youtube.com/watch?v=V_qB6dL934w

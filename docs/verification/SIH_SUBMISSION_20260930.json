@@ -1,0 +1,122 @@
+{
+  "date": "2026-09-30",
+  "scope": "Presentation/document verification only, not attribution accuracy or SIH portal submission",
+  "files": [
+    {
+      "path": "output/submission/TraceSetu_SIH2026_Idea_Submission.pptx",
+      "sha256": "71616cbb3074cfb326f31cec0cf05ba4e914a9eddc344cc234ee9d88387c2257",
+      "bytes": 887818
+    },
+    {
+      "path": "output/pdf/TraceSetu_SIH2026_Idea_Submission.pdf",
+      "sha256": "30fed0541daec049aab96441e89dbbdd4f5647cedcbe16c2cdd0679a958f9aec",
+      "bytes": 576892
+    },
+    {
+      "path": "output/submission/TraceSetu_Idea_Description_Abstract.txt",
+      "sha256": "a2f0ec29b0af1ffff97e4390ae88893a4b0b015b217b37aa6b1b1cda18bd04b6",
+      "bytes": 2052
+    }
+  ],
+  "source_template": "SIH2026-IDEA-Presentation-Format (10).pptx",
+  "source_template_sha256": "ce3e5deebec2741f3383cb2dd21269cad8d9930f7c747c9903d7d4b27db14de6",
+  "slides": 6,
+  "template_masters_layouts_themes_unchanged": true,
+  "template_chrome_preserved": {
+    "1": [
+      "",
+      "Rectangle 24",
+      "Freeform: Shape 26",
+      "Picture 4",
+      "Title 7",
+      "Picture 1"
+    ],
+    "2": [
+      "",
+      "Rectangle 8",
+      "Slide Number Placeholder 5",
+      "Footer Placeholder 6",
+      "Picture 10"
+    ],
+    "3": [
+      "",
+      "Rectangle 9",
+      "Title 1",
+      "Slide Number Placeholder 5",
+      "Footer Placeholder 6",
+      "Picture 11"
+    ],
+    "4": [
+      "",
+      "Rectangle 9",
+      "Title 1",
+      "Slide Number Placeholder 5",
+      "Footer Placeholder 6",
+      "Picture 10"
+    ],
+    "5": [
+      "",
+      "Rectangle 9",
+      "Title 1",
+      "Slide Number Placeholder 5",
+      "Footer Placeholder 6",
+      "Picture 10"
+    ],
+    "6": [
+      "",
+      "Rectangle 9",
+      "Title 1",
+      "Slide Number Placeholder 5",
+      "Footer Placeholder 6",
+      "Picture 11"
+    ]
+  },
+  "package_check": "pass",
+  "font_policy_passed": true,
+  "artifact_import_passed": true,
+  "native_powerpoint_all_slides_reviewed": true,
+  "native_powerpoint_hyperlinks": 9,
+  "pdf_all_pages_reviewed": true,
+  "pdf_page_count": 6,
+  "pdf_hyperlinks": [
+    {
+      "page": 6,
+      "url": "https://fc20.ifca.ai/preproceedings/31.pdf"
+    },
+    {
+      "page": 6,
+      "url": "https://doi.org/10.1002/nem.2325"
+    },
+    {
+      "page": 6,
+      "url": "https://www.vldb.org/pvldb/vol7/p721-wu.pdf"
+    },
+    {
+      "page": 6,
+      "url": "https://www.usenix.org/system/files/sec22-kappos.pdf"
+    },
+    {
+      "page": 6,
+      "url": "https://www.usenix.org/system/files/usenixsecurity25-lubbertsen.pdf"
+    },
+    {
+      "page": 6,
+      "url": "https://github.com/notvinayaks/TraceSetu/tree/product/live-foundation"
+    },
+    {
+      "page": 6,
+      "url": "https://github.com/notvinayaks/TraceSetu/tree/product/live-foundation"
+    },
+    {
+      "page": 6,
+      "url": "https://www.youtube.com/watch?v=V_qB6dL934w"
+    },
+    {
+      "page": 6,
+      "url": "https://www.youtube.com/watch?v=V_qB6dL934w"
+    }
+  ],
+  "pdf_link_note": "Restored native PDF-export omitted hyperlinks as annotations. Native page content streams remain unchanged.",
+  "screenshot": "Actual TraceSetu synthetic training case, captured 2026-09-26. Current app inspection 2026-09-30. No fresh blockchain fetch claimed.",
+  "research_scope": "64 synthetic reference tests; live accuracy, detector app integration and official SAHYOG connection pending."
+}

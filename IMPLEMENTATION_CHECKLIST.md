@@ -1,5 +1,13 @@
 # Custody Atlas — full-product backlog
 
+## Final template submission and public publication — 30 September 2026
+
+- [x] Publish completed project work publicly on `product/live-foundation` while preserving the MVP on `main`. Evidence: anonymous repository access and four successful hosted checks at commit `eb5b899c48a5b5c69322f4fa6546a643a10af595`, run `36720225633`.
+- [x] Rebuild the six-slide idea presentation in the exact supplied `(10)` template, include an authentic labelled prototype screenshot, verified-method references, public repository/demo links and separate implemented/research status. Evidence: `docs/SIH_SUBMISSION_20260930.md` and the final PowerPoint/PDF package checks.
+- [x] Provide copy-ready idea title, description and abstract, and update the complete project handover. Evidence: `output/submission/TraceSetu_Idea_Description_Abstract.txt` and `skills/custody-atlas-sih/SKILL.md`.
+
+Documentation/publication only. The named engineering counts remain unchanged. No SIH portal upload, new live attribution result, application integration or full-product completion is claimed.
+
 ## Research-method review — 29 September 2026
 
 - [x] Review primary cryptocurrency-forensics papers, specify seeded deposit-candidate inference plus temporal first-custody search, and explain its evidence/identifiability limits. Evidence: `research/method-review-20260929/TraceSetu_Forensic_Method_Research_Paper.md` and the eight-page reviewed PDF in `output/pdf/`.

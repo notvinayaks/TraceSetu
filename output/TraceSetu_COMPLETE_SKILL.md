@@ -7,11 +7,19 @@ metadata:
 
 # TraceSetu: complete solution, project skill and SIH handover
 
-**Edition:** 29 September 2026, Asia/Calcutta — forensic-method research revision; earlier branding, real-case and implementation records preserved. **Product:** TraceSetu (Trace + Setu / सेतु), formerly Vittanvaya; originally Custody Atlas. **Audience:** an AI or developer with no prior conversation. **Document form:** one self-contained file, as explicitly requested by the user. It contains the original requirements, current implementation, complete recorded research report, source register, operating instructions, actual contracts, verification evidence and future backlog. Supporting source files remain the executable authority; this skill is not a replacement repository or a backup of private case data.
+**Edition:** 30 September 2026, Asia/Calcutta — final template submission and public publication; earlier branding, real-case and implementation records preserved. **Product:** TraceSetu (Trace + Setu / सेतु), formerly Vittanvaya; originally Custody Atlas. **Audience:** an AI or developer with no prior conversation. **Document form:** one self-contained file, as explicitly requested by the user. It contains the original requirements, current implementation, complete recorded research report, source register, operating instructions, actual contracts, verification evidence and future backlog. Supporting source files remain the executable authority; this skill is not a replacement repository or a backup of private case data.
 
 <a id="current-0"></a>
 
 ## 0. Read this first: scope, truth and how to use this file
+
+### Final supplied-template deck and public repository — 30 September 2026
+
+The user requested a fresh, simpler six-slide presentation inside `SIH2026-IDEA-Presentation-Format (10).pptx`, using the updated forensic research and their example deck only for visual hierarchy. Current final files: `output/submission/TraceSetu_SIH2026_Idea_Submission.pptx`, `output/pdf/TraceSetu_SIH2026_Idea_Submission.pdf`, and `output/submission/TraceSetu_Idea_Description_Abstract.txt`. Read `docs/SIH_SUBMISSION_20260930.md` for design, sources and evidence. The original template and earlier decks remain unchanged. The new deck preserves masters, themes, logo/footer objects and template font families, while replacing allowed cover/team fields and middle content. Six native PowerPoint slides and the matching PDF were checked. No AI-generated visual or watermark was added.
+
+The public repository is `https://github.com/notvinayaks/TraceSetu`; the complete current package is on `product/live-foundation`, while `main` preserves MVP commit `fac605d5e9d8688b561933790a571c65f6e704b3`. Anonymous public access and all four GitHub Actions checks were verified for completed-work commit `eb5b899c48a5b5c69322f4fa6546a643a10af595`. Read the repository publication record for later submission-only commits. Earlier private-repository statements in this single-file historical handover are superseded for current visibility.
+
+Slide 4 uses an actual 26 September TraceSetu interface capture, explicitly marked synthetic training. Current app inspection on 30 September also confirmed that the saved public Bitcoin case reports no established VASP. That inspection was not a fresh provider fetch. The supplied video `https://www.youtube.com/watch?v=V_qB6dL934w` demonstrates the existing prototype, not the newer detector. The deck visibly separates the working case workflow from the isolated 64-test detector and shows public/free API scope and disconnected SAHYOG. No real-world attribution accuracy or completion claim was added. No application/UI/backend changes occurred in this presentation task. No SIH portal submission is claimed.
 
 ### GitHub publication scope extended — 30 September 2026
 
