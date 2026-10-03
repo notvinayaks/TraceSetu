@@ -7,11 +7,19 @@ metadata:
 
 # TraceSetu: complete solution, project skill and SIH handover
 
-**Edition:** 30 September 2026, Asia/Calcutta — final template submission and public publication; earlier branding, real-case and implementation records preserved. **Product:** TraceSetu (Trace + Setu / सेतु), formerly Vittanvaya; originally Custody Atlas. **Audience:** an AI or developer with no prior conversation. **Document form:** one self-contained file, as explicitly requested by the user. It contains the original requirements, current implementation, complete recorded research report, source register, operating instructions, actual contracts, verification evidence and future backlog. Supporting source files remain the executable authority; this skill is not a replacement repository or a backup of private case data.
+**Edition:** 3 October 2026, Asia/Calcutta — replacement presentation and refreshed primary-source review; earlier branding, real-case and implementation records preserved. **Product:** TraceSetu (Trace + Setu / सेतु), formerly Vittanvaya; originally Custody Atlas. **Audience:** an AI or developer with no prior conversation. **Document form:** one self-contained file, as explicitly requested by the user. It contains the original requirements, current implementation, complete recorded research report, source register, operating instructions, actual contracts, verification evidence and future backlog. Supporting source files remain the executable authority; this skill is not a replacement repository or a backup of private case data.
 
 <a id="current-0"></a>
 
 ## 0. Read this first: scope, truth and how to use this file
+
+### Replacement presentation — 3 October 2026
+
+The user rejected the 30 September presentation and requested a new content/design treatment, keeping the original `(10)` SIH template and drawing much more closely on the supplied EcoWipe reference PDF. The replacement files are `output/submission/TraceSetu_SIH2026_Revised_20261003.pptx` and `output/pdf/TraceSetu_SIH2026_Revised_20261003.pdf`. Use these for the current deck; earlier versions remain historical. See `docs/SIH_SUBMISSION_20261003.md`.
+
+The user then required four explicit evaluator answers: novelty beyond CRUD, feasibility within 36 hours, practicality at Ministry scale, and an appropriate modern stack. Slide 5 presents the evidence/decision contribution and comparison; slide 4 contains a scoped 36-hour sprint on the existing foundation and the Ministry deployment path with pending data, governance and load-validation gates; slide 3 maps each actual technology to its purpose. The schedule is a proposed plan, not proof of full-product completion in 36 hours.
+
+The new six-slide story contains the unknown-service problem, first-custody workflow, chain-specific/time-valid graph search, a separately labelled deposit-candidate research module, current feasibility and risks, an editable controlled-experiment comparison, and primary references with an actual labelled training screenshot and repository/video links. The original logo/footer/master/theme objects and heading fonts are retained. Fresh primary-paper review specifically checked Victor’s forwarding heuristic, Brechlin et al.’s fee-funding pattern **and service-side role confirmation**, Wu et al.’s temporal paths, Kappos et al.’s Bitcoin clustering, and Lubbertsen et al.’s independent role-aware evaluation. The existing 64 synthetic reference tests passed again on 3 October; no application changes, new live attribution, independent accuracy result, detector integration or SAHYOG connectivity are claimed. Public GitHub visibility was rechecked anonymously. The full-product backlog remains stopped.
 
 ### Final supplied-template deck and public repository — 30 September 2026
 

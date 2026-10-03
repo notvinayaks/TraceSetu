@@ -1,5 +1,11 @@
 # Custody Atlas — full-product backlog
 
+## Replacement presentation — 3 October 2026
+
+- [x] Rebuild the six-slide submission in the original `(10)` template with a reference-inspired problem/solution layout, editable methods flow, concrete experiment comparison, actual labelled prototype screenshot and primary-source links. Recheck source claims, rerun the 64 synthetic reference tests and inspect the native PowerPoint/PDF output. Deliverables: `docs/SIH_SUBMISSION_20261003.md`.
+
+Documentation only; no new production capability or live attribution is claimed. Named engineering counts are unchanged.
+
 ## Final template submission and public publication — 30 September 2026
 
 - [x] Publish completed project work publicly on `product/live-foundation` while preserving the MVP on `main`. Evidence: anonymous repository access and four successful hosted checks at commit `eb5b899c48a5b5c69322f4fa6546a643a10af595`, run `36720225633`.
