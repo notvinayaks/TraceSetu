@@ -1,6 +1,6 @@
 # Product mandate: VASP attribution for the MHA / I4C SIH problem
 
-**Presentation replacement — 3 October 2026:** the user rejected the September 30 deck. The current replacement is `output/submission/TraceSetu_SIH2026_Revised_20261003.pptx` with a matching PDF in `output/pdf/`. See `docs/SIH_SUBMISSION_20261003.md`. Original template structure is preserved, the reference layout is used more closely, and implemented/research scope remains explicit. No product build was resumed.
+**Current method deck — 3 October 2026:** use `output/submission/TraceSetu_SIH2026_Method_Final_20261003.pptx` and the matching PDF. See `docs/SIH_METHOD_DECK_20261003.md` and `research/TRACESETU_METHOD_EXPLAINED_20261003.md`. The deck specifies service-seed provenance, the separate deposit-pattern rule, exact synthetic accounting and chronological breadth-first search. It supersedes the earlier `Revised_20261003` deck. No product build was resumed; the matcher remains separate research and free identity-label coverage remains a gate.
 
 **Public submission update — 30 September 2026:** the user authorised making `notvinayaks/TraceSetu` public. Anonymous GitHub access was verified, and all four hosted checks passed for completed-work commit `eb5b899c48a5b5c69322f4fa6546a643a10af595`. The complete package remains on `product/live-foundation`; `main` remains the original MVP. The final six-slide presentation in the supplied `(10)` template, PDF and submission fields are listed in `docs/SIH_SUBMISSION_20260930.md`. Earlier private-repository references below describe history.
 

@@ -1,6 +1,12 @@
 # Custody Atlas — full-product backlog
 
-## Replacement presentation — 3 October 2026
+## Explicit attribution-method presentation — 3 October 2026
+
+- [x] Audit the service-label inputs and separate matcher against actual code and primary papers; explain service-seed provenance, fee/sweep rules, balances, chronological BFS, counterexamples and data-access limits. Reproduce the three illustrated outcomes and rebuild the deck inside the original template. Inspect every native PowerPoint slide and PDF page. Evidence: `docs/SIH_METHOD_DECK_20261003.md` and `research/TRACESETU_WORKED_EXAMPLE_20261003.json`.
+
+Documentation/reproduction only. No new live attribution or engineering readiness is claimed; the full-product backlog remains stopped.
+
+## Earlier replacement presentation — 3 October 2026
 
 - [x] Rebuild the six-slide submission in the original `(10)` template with a reference-inspired problem/solution layout, editable methods flow, concrete experiment comparison, actual labelled prototype screenshot and primary-source links. Recheck source claims, rerun the 64 synthetic reference tests and inspect the native PowerPoint/PDF output. Deliverables: `docs/SIH_SUBMISSION_20261003.md`.
 

@@ -1,0 +1,105 @@
+{
+  "origin": "entirely_synthetic",
+  "date": "2026-10-03",
+  "application_integration": false,
+  "baseline": [
+    {
+      "address": "SYNTHETIC_HOT_WALLET",
+      "path_event_ids": [
+        "deposit-1",
+        "sweep-1"
+      ],
+      "hops": 2,
+      "status": "known_service_assertion",
+      "service": "SYNTHETIC_SERVICE_ALPHA",
+      "anchor_ids": [
+        "hot-role"
+      ],
+      "asserted_roles": [
+        "hot_wallet"
+      ],
+      "deposit_acceptance_asserted": false,
+      "unlabelled_predecessors": [
+        "SYNTHETIC_DEPOSIT_CANDIDATE"
+      ],
+      "nearest_proven": false
+    },
+    {
+      "address": "SYNTHETIC_HOT_WALLET",
+      "path_event_ids": [
+        "deposit-1",
+        "sweep-2"
+      ],
+      "hops": 2,
+      "status": "known_service_assertion",
+      "service": "SYNTHETIC_SERVICE_ALPHA",
+      "anchor_ids": [
+        "hot-role"
+      ],
+      "asserted_roles": [
+        "hot_wallet"
+      ],
+      "deposit_acceptance_asserted": false,
+      "unlabelled_predecessors": [
+        "SYNTHETIC_DEPOSIT_CANDIDATE"
+      ],
+      "nearest_proven": false
+    },
+    {
+      "address": "SYNTHETIC_HOT_WALLET",
+      "path_event_ids": [
+        "deposit-1",
+        "sweep-3"
+      ],
+      "hops": 2,
+      "status": "known_service_assertion",
+      "service": "SYNTHETIC_SERVICE_ALPHA",
+      "anchor_ids": [
+        "hot-role"
+      ],
+      "asserted_roles": [
+        "hot_wallet"
+      ],
+      "deposit_acceptance_asserted": false,
+      "unlabelled_predecessors": [
+        "SYNTHETIC_DEPOSIT_CANDIDATE"
+      ],
+      "nearest_proven": false
+    }
+  ],
+  "with_candidate": [
+    {
+      "address": "SYNTHETIC_DEPOSIT_CANDIDATE",
+      "path_event_ids": [
+        "deposit-1"
+      ],
+      "hops": 1,
+      "status": "provisional_custody_boundary",
+      "service": "SYNTHETIC_SERVICE_ALPHA",
+      "ownership_proven": false,
+      "independent_confirmation_required": true,
+      "nearest_proven": false
+    }
+  ],
+  "without_feeder_assertion": [
+    {
+      "address": "SYNTHETIC_DEPOSIT_CANDIDATE",
+      "path_event_ids": [
+        "deposit-1"
+      ],
+      "hops": 1,
+      "status": "unresolved_assessed_boundary",
+      "reasons": [
+        "source_qualified_service_gas_feeder_missing"
+      ]
+    }
+  ],
+  "token_received_and_swept": 6000,
+  "native_funding": 300,
+  "native_fees": 30,
+  "closing_balances": {
+    "synthetic:plain-token": 0,
+    "synthetic:native": 270
+  },
+  "real_world_accuracy_measured": false
+}
